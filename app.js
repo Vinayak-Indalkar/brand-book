@@ -89,6 +89,17 @@ function initTypographyPlayground() {
 
   if (!textElem) return;
 
+  function updateSliderFill(input) {
+    if (!input || input.type !== 'range') return;
+    const min = parseFloat(input.min) || 0;
+    const max = parseFloat(input.max) || 100;
+    const val = parseFloat(input.value) || 0;
+    const percent = ((val - min) / (max - min)) * 100;
+    const isDark = document.body.classList.contains('dark-theme');
+    const trackColor = isDark ? '#1e293b' : '#e2e8f0';
+    input.style.background = `linear-gradient(to right, #2a5ba9 0%, #6cbae7 ${percent}%, ${trackColor} ${percent}%, ${trackColor} 100%)`;
+  }
+
   function updateTypeStyles() {
     const size = sizeInput ? sizeInput.value : 48;
     const weight = weightInput ? weightInput.value : 700;
@@ -105,6 +116,8 @@ function initTypographyPlayground() {
     textElem.style.fontFamily = `'${font}', sans-serif`;
     textElem.style.letterSpacing = `${spacing}px`;
     textElem.style.lineHeight = height;
+
+    [sizeInput, spacingInput, heightInput].forEach(updateSliderFill);
 
     if (cssOutput) {
       cssOutput.textContent = `font-family: '${font}', sans-serif; font-size: ${size}px; font-weight: ${weight}; line-height: ${height}; letter-spacing: ${spacing}px;`;
