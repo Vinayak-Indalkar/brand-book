@@ -1,5 +1,6 @@
 /**
  * QUANTIRA TECHNOLOGIES - Official Brand Guidelines v1.0 Script
+ * Accurately matching the 21-page Brand Guidelines PDF document
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -146,65 +147,51 @@ function initLogoStageControls() {
 }
 
 // --------------------------------------------------------------------------
-// Quantira SVG Vector Assets Generator (Phi + Planet + Quantum Circuits)
+// Quantira SVG Vector Assets Generator (Accurate to PDF Page 4, 5, 7, 9)
 // --------------------------------------------------------------------------
 const SVG_ASSETS = {
   master_gradient: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
   <defs>
-    <linearGradient id="qGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="qDocGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#6CBAE7"/>
       <stop offset="100%" stop-color="#2A5BA9"/>
     </linearGradient>
   </defs>
-  <!-- Quantira Stylized Q Mark (Phi + Planet + Quantum Circuit) -->
+  <!-- Quantira Q Mark (Matching PDF Page 5) -->
   <g transform="translate(20, 15)">
-    <!-- Planetary Core Orb -->
-    <circle cx="45" cy="45" r="32" fill="none" stroke="url(#qGrad)" stroke-width="6"/>
-    <!-- Phi (Ø) Diagonal Quantum Axis -->
-    <line x1="22" y1="68" x2="68" y2="22" stroke="url(#qGrad)" stroke-width="5" stroke-linecap="round"/>
-    <!-- Planetary Orbit Ring -->
-    <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#6CBAE7" stroke-width="2.5" transform="rotate(-30 45 45)"/>
-    <!-- Quantum Circuit Nodes -->
-    <circle cx="22" cy="68" r="4.5" fill="#2A5BA9"/>
-    <circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
-    <!-- Q Tail Circuit Terminal -->
-    <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="url(#qGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="85" cy="75" r="4.5" fill="#2A5BA9"/>
+    <!-- Top-Left Segment with Wing -->
+    <path d="M 12 44 C 20 44 26 40 32 32 C 40 22 52 16 66 16 C 82 16 95 28 95 45 C 95 50 93 56 90 61 L 76 47 C 77 44 77 42 77 39 C 77 31 71 25 63 25 C 55 25 48 30 45 37 L 31 51 C 29 48 24 45 12 44 Z" fill="url(#qDocGrad)"/>
+    <!-- Bottom-Right Segment with Tail -->
+    <path d="M 88 56 C 80 56 74 60 68 68 C 60 78 48 84 34 84 C 18 84 5 72 5 55 C 5 50 7 44 10 39 L 24 53 C 23 56 23 58 23 61 C 23 69 29 75 37 75 C 45 75 52 70 55 63 L 69 49 C 71 52 76 55 88 56 Z" fill="url(#qDocGrad)"/>
+    <!-- Tail Extension Blade -->
+    <path d="M 68 68 L 88 88 L 92 82 L 74 62 Z" fill="url(#qDocGrad)"/>
   </g>
-  <!-- Wordmark: QUANTIRA TECHNOLOGIES -->
+  <!-- Wordmark -->
   <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="#020202" letter-spacing="2.5">QUANTIRA</text>
-  <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#2A5BA9" letter-spacing="7">TECHNOLOGIES</text>
+  <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#020202" letter-spacing="7">TECHNOLOGIES</text>
 </svg>`,
 
   dark_format: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
   <defs>
-    <linearGradient id="qGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="qDocGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#6CBAE7"/>
       <stop offset="100%" stop-color="#2A5BA9"/>
     </linearGradient>
   </defs>
   <g transform="translate(20, 15)">
-    <circle cx="45" cy="45" r="32" fill="none" stroke="url(#qGradDark)" stroke-width="6"/>
-    <line x1="22" y1="68" x2="68" y2="22" stroke="url(#qGradDark)" stroke-width="5" stroke-linecap="round"/>
-    <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#6CBAE7" stroke-width="2.5" transform="rotate(-30 45 45)"/>
-    <circle cx="22" cy="68" r="4.5" fill="#6CBAE7"/>
-    <circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
-    <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="url(#qGradDark)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="85" cy="75" r="4.5" fill="#6CBAE7"/>
+    <path d="M 12 44 C 20 44 26 40 32 32 C 40 22 52 16 66 16 C 82 16 95 28 95 45 C 95 50 93 56 90 61 L 76 47 C 77 44 77 42 77 39 C 77 31 71 25 63 25 C 55 25 48 30 45 37 L 31 51 C 29 48 24 45 12 44 Z" fill="url(#qDocGradDark)"/>
+    <path d="M 88 56 C 80 56 74 60 68 68 C 60 78 48 84 34 84 C 18 84 5 72 5 55 C 5 50 7 44 10 39 L 24 53 C 23 56 23 58 23 61 C 23 69 29 75 37 75 C 45 75 52 70 55 63 L 69 49 C 71 52 76 55 88 56 Z" fill="url(#qDocGradDark)"/>
+    <path d="M 68 68 L 88 88 L 92 82 L 74 62 Z" fill="url(#qDocGradDark)"/>
   </g>
   <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="#FFFFFF" letter-spacing="2.5">QUANTIRA</text>
-  <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#6CBAE7" letter-spacing="7">TECHNOLOGIES</text>
+  <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" letter-spacing="7">TECHNOLOGIES</text>
 </svg>`,
 
   outline_version: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
   <g transform="translate(20, 15)">
-    <circle cx="45" cy="45" r="32" fill="none" stroke="#2A5BA9" stroke-width="3"/>
-    <line x1="22" y1="68" x2="68" y2="22" stroke="#2A5BA9" stroke-width="3" stroke-linecap="round"/>
-    <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#2A5BA9" stroke-width="2" stroke-dasharray="4 4" transform="rotate(-30 45 45)"/>
-    <circle cx="22" cy="68" r="3" fill="none" stroke="#2A5BA9" stroke-width="2"/>
-    <circle cx="68" cy="22" r="3" fill="none" stroke="#2A5BA9" stroke-width="2"/>
-    <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="#2A5BA9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="85" cy="75" r="3" fill="none" stroke="#2A5BA9" stroke-width="2"/>
+    <path d="M 12 44 C 20 44 26 40 32 32 C 40 22 52 16 66 16 C 82 16 95 28 95 45 C 95 50 93 56 90 61 L 76 47 C 77 44 77 42 77 39 C 77 31 71 25 63 25 C 55 25 48 30 45 37 L 31 51 C 29 48 24 45 12 44 Z" fill="none" stroke="#2A5BA9" stroke-width="3"/>
+    <path d="M 88 56 C 80 56 74 60 68 68 C 60 78 48 84 34 84 C 18 84 5 72 5 55 C 5 50 7 44 10 39 L 24 53 C 23 56 23 58 23 61 C 23 69 29 75 37 75 C 45 75 52 70 55 63 L 69 49 C 71 52 76 55 88 56 Z" fill="none" stroke="#2A5BA9" stroke-width="3"/>
+    <path d="M 68 68 L 88 88 L 92 82 L 74 62 Z" fill="none" stroke="#2A5BA9" stroke-width="3"/>
   </g>
   <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="700" fill="none" stroke="#020202" stroke-width="1.5" letter-spacing="2.5">QUANTIRA</text>
   <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#2A5BA9" letter-spacing="7">TECHNOLOGIES</text>
@@ -212,34 +199,24 @@ const SVG_ASSETS = {
 
   mono_black: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
   <g transform="translate(20, 15)">
-    <circle cx="45" cy="45" r="32" fill="none" stroke="#020202" stroke-width="6"/>
-    <line x1="22" y1="68" x2="68" y2="22" stroke="#020202" stroke-width="5" stroke-linecap="round"/>
-    <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#020202" stroke-width="2.5" transform="rotate(-30 45 45)"/>
-    <circle cx="22" cy="68" r="4.5" fill="#020202"/>
-    <circle cx="68" cy="22" r="4.5" fill="#020202"/>
-    <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="#020202" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="85" cy="75" r="4.5" fill="#020202"/>
+    <path d="M 12 44 C 20 44 26 40 32 32 C 40 22 52 16 66 16 C 82 16 95 28 95 45 C 95 50 93 56 90 61 L 76 47 C 77 44 77 42 77 39 C 77 31 71 25 63 25 C 55 25 48 30 45 37 L 31 51 C 29 48 24 45 12 44 Z" fill="#020202"/>
+    <path d="M 88 56 C 80 56 74 60 68 68 C 60 78 48 84 34 84 C 18 84 5 72 5 55 C 5 50 7 44 10 39 L 24 53 C 23 56 23 58 23 61 C 23 69 29 75 37 75 C 45 75 52 70 55 63 L 69 49 C 71 52 76 55 88 56 Z" fill="#020202"/>
+    <path d="M 68 68 L 88 88 L 92 82 L 74 62 Z" fill="#020202"/>
   </g>
   <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="#020202" letter-spacing="2.5">QUANTIRA</text>
   <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#020202" letter-spacing="7">TECHNOLOGIES</text>
 </svg>`,
 
-  monogram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  monogram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
   <defs>
-    <linearGradient id="qMonoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="qMonoPdf" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#6CBAE7"/>
       <stop offset="100%" stop-color="#2A5BA9"/>
     </linearGradient>
   </defs>
-  <g transform="translate(15, 15)">
-    <circle cx="45" cy="45" r="32" fill="none" stroke="url(#qMonoGrad)" stroke-width="6"/>
-    <line x1="22" y1="68" x2="68" y2="22" stroke="url(#qMonoGrad)" stroke-width="5" stroke-linecap="round"/>
-    <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#6CBAE7" stroke-width="2.5" transform="rotate(-30 45 45)"/>
-    <circle cx="22" cy="68" r="4.5" fill="#2A5BA9"/>
-    <circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
-    <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="url(#qMonoGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="85" cy="75" r="4.5" fill="#2A5BA9"/>
-  </g>
+  <path d="M 12 44 C 20 44 26 40 32 32 C 40 22 52 16 66 16 C 82 16 95 28 95 45 C 95 50 93 56 90 61 L 76 47 C 77 44 77 42 77 39 C 77 31 71 25 63 25 C 55 25 48 30 45 37 L 31 51 C 29 48 24 45 12 44 Z" fill="url(#qMonoPdf)"/>
+  <path d="M 88 56 C 80 56 74 60 68 68 C 60 78 48 84 34 84 C 18 84 5 72 5 55 C 5 50 7 44 10 39 L 24 53 C 23 56 23 58 23 61 C 23 69 29 75 37 75 C 45 75 52 70 55 63 L 69 49 C 71 52 76 55 88 56 Z" fill="url(#qMonoPdf)"/>
+  <path d="M 68 68 L 88 88 L 92 82 L 74 62 Z" fill="url(#qMonoPdf)"/>
 </svg>`
 };
 
@@ -280,7 +257,7 @@ function initAssetDownloads() {
 }
 
 // --------------------------------------------------------------------------
-// Design Token Exporters (Quantira Technologies Specs)
+// Design Token Exporters
 // --------------------------------------------------------------------------
 const QUANTIRA_TOKENS = {
   brand: "Quantira Technologies",
@@ -303,18 +280,17 @@ const QUANTIRA_TOKENS = {
     },
     accentCTA: {
       name: "Blue Gradient",
-      gradient: "linear-gradient(135deg, #6cbae7 0%, #2a5ba9 100%)",
       from: "#6cbae7",
       to: "#2a5ba9",
+      gradient: "linear-gradient(135deg, #6cbae7 0%, #2a5ba9 100%)",
       ratio: "20%"
     }
   },
   typography: {
     primaryFont: "Lexend, sans-serif",
-    secondaryFont: "Noto Sans, sans-serif",
-    monoFont: "JetBrains Mono, monospace"
+    secondaryFont: "Noto Sans, sans-serif"
   },
-  geometry: "Isometric cube / blockchain quantum lattice"
+  pattern: "Block chain pattern originated from quantum bits"
 };
 
 function initTokenExporters() {
@@ -336,11 +312,10 @@ function initTokenExporters() {
   --quantira-core-black: #020202;
   --quantira-blue-light: #6cbae7;
   --quantira-blue-deep: #2a5ba9;
-  --quantira-gradient: linear-gradient(135deg, #6cbae7 0%, #2a5ba9 100%);
+  --quantira-blue-gradient: linear-gradient(135deg, #6cbae7 0%, #2a5ba9 100%);
   
   --font-primary: 'Lexend', sans-serif;
   --font-secondary: 'Noto Sans', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
 }`;
       downloadFile('quantira-tokens.css', cssContent, 'text/css');
     });
@@ -361,9 +336,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        primary: ['Lexend', 'sans-serif'],
-        secondary: ['Noto Sans', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        title: ['Lexend', 'sans-serif'],
+        body: ['Noto Sans', 'sans-serif'],
       }
     }
   }
@@ -418,7 +392,7 @@ function initThemeToggle() {
 // ScrollSpy for Active Sidebar Links
 // --------------------------------------------------------------------------
 function initScrollSpy() {
-  const sections = document.querySelectorAll('.brand-section, .hero-banner');
+  const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
   window.addEventListener('scroll', () => {
