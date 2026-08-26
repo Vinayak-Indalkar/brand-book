@@ -1,5 +1,5 @@
 /**
- * SOLIS DYNAMICS - Interactive Brand Guidelines Script
+ * QUANTIRA TECHNOLOGIES - Official Brand Guidelines v1.0 Script
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initAssetDownloads();
   initTokenExporters();
   initThemeToggle();
-  initSidebarSearch();
   initScrollSpy();
 });
 
@@ -27,7 +26,7 @@ function showToast(message) {
   const toast = document.createElement('div');
   toast.className = 'toast';
   toast.innerHTML = `
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--solis-plasma)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6cbae7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
     <span>${message}</span>
@@ -35,10 +34,8 @@ function showToast(message) {
 
   container.appendChild(toast);
 
-  // Trigger animation
   setTimeout(() => toast.classList.add('show'), 10);
 
-  // Auto remove after 3s
   setTimeout(() => {
     toast.classList.remove('show');
     setTimeout(() => toast.remove(), 300);
@@ -75,7 +72,7 @@ function initCopyButtons() {
 }
 
 // --------------------------------------------------------------------------
-// Typography Live Playground
+// Typography Live Playground (Lexend & Noto Sans)
 // --------------------------------------------------------------------------
 function initTypographyPlayground() {
   const textElem = document.getElementById('playgroundText');
@@ -94,7 +91,7 @@ function initTypographyPlayground() {
   function updateTypeStyles() {
     const size = sizeInput ? sizeInput.value : 48;
     const weight = weightInput ? weightInput.value : 700;
-    const font = fontInput ? fontInput.value : 'Outfit';
+    const font = fontInput ? fontInput.value : 'Lexend';
     const spacing = spacingInput ? spacingInput.value : -0.5;
     const height = heightInput ? heightInput.value : 1.2;
 
@@ -141,80 +138,108 @@ function initLogoStageControls() {
 
   if (toggleBgBtn && stage) {
     toggleBgBtn.addEventListener('click', () => {
-      stage.classList.toggle('light-bg');
-      const isLight = stage.classList.contains('light-bg');
-      toggleBgBtn.textContent = isLight ? 'Dark Background' : 'Light Background';
+      stage.classList.toggle('dark-bg');
+      const isDark = stage.classList.contains('dark-bg');
+      toggleBgBtn.textContent = isDark ? 'Light Background' : 'Dark Background';
     });
   }
 }
 
 // --------------------------------------------------------------------------
-// SVG Asset Generator & Direct Download
+// Quantira SVG Vector Assets Generator (Phi + Planet + Quantum Circuits)
 // --------------------------------------------------------------------------
 const SVG_ASSETS = {
-  master_color: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120">
+  master_gradient: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
   <defs>
-    <linearGradient id="solisGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF6B00"/>
-      <stop offset="60%" stop-color="#FFA800"/>
-      <stop offset="100%" stop-color="#00F0FF"/>
+    <linearGradient id="qGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6CBAE7"/>
+      <stop offset="100%" stop-color="#2A5BA9"/>
     </linearGradient>
   </defs>
-  <!-- Solar Monogram Symbol -->
+  <!-- Quantira Stylized Q Mark (Phi + Planet + Quantum Circuit) -->
   <g transform="translate(20, 15)">
-    <circle cx="45" cy="45" r="42" fill="none" stroke="url(#solisGlow)" stroke-width="6" stroke-dasharray="180 50" stroke-linecap="round"/>
-    <circle cx="45" cy="45" r="28" fill="none" stroke="#FF6B00" stroke-width="4" opacity="0.6"/>
-    <circle cx="45" cy="45" r="14" fill="#FFA800"/>
-    <ellipse cx="45" cy="45" rx="38" ry="12" fill="none" stroke="#00F0FF" stroke-width="3" transform="rotate(-30 45 45)"/>
+    <!-- Planetary Core Orb -->
+    <circle cx="45" cy="45" r="32" fill="none" stroke="url(#qGrad)" stroke-width="6"/>
+    <!-- Phi (Ø) Diagonal Quantum Axis -->
+    <line x1="22" y1="68" x2="68" y2="22" stroke="url(#qGrad)" stroke-width="5" stroke-linecap="round"/>
+    <!-- Planetary Orbit Ring -->
+    <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#6CBAE7" stroke-width="2.5" transform="rotate(-30 45 45)"/>
+    <!-- Quantum Circuit Nodes -->
+    <circle cx="22" cy="68" r="4.5" fill="#2A5BA9"/>
+    <circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
+    <!-- Q Tail Circuit Terminal -->
+    <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="url(#qGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="85" cy="75" r="4.5" fill="#2A5BA9"/>
   </g>
-  <!-- Wordmark -->
-  <text x="130" y="65" font-family="'Outfit', 'Space Grotesk', sans-serif" font-size="44" font-weight="800" fill="#F8FAFC" letter-spacing="4">SOLIS</text>
-  <text x="132" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#FF6B00" letter-spacing="9">DYNAMICS</text>
+  <!-- Wordmark: QUANTIRA TECHNOLOGIES -->
+  <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="#020202" letter-spacing="2.5">QUANTIRA</text>
+  <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#2A5BA9" letter-spacing="7">TECHNOLOGIES</text>
 </svg>`,
 
-  dark_mono: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120">
+  dark_format: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
+  <defs>
+    <linearGradient id="qGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6CBAE7"/>
+      <stop offset="100%" stop-color="#2A5BA9"/>
+    </linearGradient>
+  </defs>
   <g transform="translate(20, 15)">
-    <circle cx="45" cy="45" r="42" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-dasharray="180 50" stroke-linecap="round"/>
-    <circle cx="45" cy="45" r="28" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.6"/>
-    <circle cx="45" cy="45" r="14" fill="#FFFFFF"/>
-    <ellipse cx="45" cy="45" rx="38" ry="12" fill="none" stroke="#FFFFFF" stroke-width="3" transform="rotate(-30 45 45)"/>
+    <circle cx="45" cy="45" r="32" fill="none" stroke="url(#qGradDark)" stroke-width="6"/>
+    <line x1="22" y1="68" x2="68" y2="22" stroke="url(#qGradDark)" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#6CBAE7" stroke-width="2.5" transform="rotate(-30 45 45)"/>
+    <circle cx="22" cy="68" r="4.5" fill="#6CBAE7"/>
+    <circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
+    <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="url(#qGradDark)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="85" cy="75" r="4.5" fill="#6CBAE7"/>
   </g>
-  <text x="130" y="65" font-family="'Outfit', sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="4">SOLIS</text>
-  <text x="132" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="9" opacity="0.85">DYNAMICS</text>
+  <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="#FFFFFF" letter-spacing="2.5">QUANTIRA</text>
+  <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#6CBAE7" letter-spacing="7">TECHNOLOGIES</text>
 </svg>`,
 
-  light_mono: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120">
+  outline_version: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
   <g transform="translate(20, 15)">
-    <circle cx="45" cy="45" r="42" fill="none" stroke="#090A0F" stroke-width="6" stroke-dasharray="180 50" stroke-linecap="round"/>
-    <circle cx="45" cy="45" r="28" fill="none" stroke="#090A0F" stroke-width="4" opacity="0.6"/>
-    <circle cx="45" cy="45" r="14" fill="#090A0F"/>
-    <ellipse cx="45" cy="45" rx="38" ry="12" fill="none" stroke="#090A0F" stroke-width="3" transform="rotate(-30 45 45)"/>
+    <circle cx="45" cy="45" r="32" fill="none" stroke="#2A5BA9" stroke-width="3"/>
+    <line x1="22" y1="68" x2="68" y2="22" stroke="#2A5BA9" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#2A5BA9" stroke-width="2" stroke-dasharray="4 4" transform="rotate(-30 45 45)"/>
+    <circle cx="22" cy="68" r="3" fill="none" stroke="#2A5BA9" stroke-width="2"/>
+    <circle cx="68" cy="22" r="3" fill="none" stroke="#2A5BA9" stroke-width="2"/>
+    <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="#2A5BA9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="85" cy="75" r="3" fill="none" stroke="#2A5BA9" stroke-width="2"/>
   </g>
-  <text x="130" y="65" font-family="'Outfit', sans-serif" font-size="44" font-weight="800" fill="#090A0F" letter-spacing="4">SOLIS</text>
-  <text x="132" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#090A0F" letter-spacing="9" opacity="0.85">DYNAMICS</text>
+  <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="700" fill="none" stroke="#020202" stroke-width="1.5" letter-spacing="2.5">QUANTIRA</text>
+  <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#2A5BA9" letter-spacing="7">TECHNOLOGIES</text>
+</svg>`,
+
+  mono_black: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
+  <g transform="translate(20, 15)">
+    <circle cx="45" cy="45" r="32" fill="none" stroke="#020202" stroke-width="6"/>
+    <line x1="22" y1="68" x2="68" y2="22" stroke="#020202" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#020202" stroke-width="2.5" transform="rotate(-30 45 45)"/>
+    <circle cx="22" cy="68" r="4.5" fill="#020202"/>
+    <circle cx="68" cy="22" r="4.5" fill="#020202"/>
+    <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="#020202" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="85" cy="75" r="4.5" fill="#020202"/>
+  </g>
+  <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="#020202" letter-spacing="2.5">QUANTIRA</text>
+  <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#020202" letter-spacing="7">TECHNOLOGIES</text>
 </svg>`,
 
   monogram: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
   <defs>
-    <linearGradient id="monoGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF6B00"/>
-      <stop offset="50%" stop-color="#FFA800"/>
-      <stop offset="100%" stop-color="#00F0FF"/>
+    <linearGradient id="qMonoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6CBAE7"/>
+      <stop offset="100%" stop-color="#2A5BA9"/>
     </linearGradient>
   </defs>
   <g transform="translate(15, 15)">
-    <circle cx="45" cy="45" r="42" fill="none" stroke="url(#monoGlow)" stroke-width="6" stroke-dasharray="180 50" stroke-linecap="round"/>
-    <circle cx="45" cy="45" r="28" fill="none" stroke="#FF6B00" stroke-width="4" opacity="0.6"/>
-    <circle cx="45" cy="45" r="14" fill="#FFA800"/>
-    <ellipse cx="45" cy="45" rx="38" ry="12" fill="none" stroke="#00F0FF" stroke-width="3" transform="rotate(-30 45 45)"/>
+    <circle cx="45" cy="45" r="32" fill="none" stroke="url(#qMonoGrad)" stroke-width="6"/>
+    <line x1="22" y1="68" x2="68" y2="22" stroke="url(#qMonoGrad)" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#6CBAE7" stroke-width="2.5" transform="rotate(-30 45 45)"/>
+    <circle cx="22" cy="68" r="4.5" fill="#2A5BA9"/>
+    <circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
+    <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="url(#qMonoGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="85" cy="75" r="4.5" fill="#2A5BA9"/>
   </g>
-</svg>`,
-
-  favicon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#090A0F"/>
-  <circle cx="32" cy="32" r="22" fill="none" stroke="#FF6B00" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="32" cy="32" r="8" fill="#FFA800"/>
-  <ellipse cx="32" cy="32" rx="20" ry="6" fill="none" stroke="#00F0FF" stroke-width="2" transform="rotate(-30 32 32)"/>
 </svg>`
 };
 
@@ -237,7 +262,7 @@ function initAssetDownloads() {
       const assetKey = btn.getAttribute('data-download-svg');
       const svgData = SVG_ASSETS[assetKey];
       if (svgData) {
-        downloadFile(`solis-dynamics-${assetKey.replace('_', '-')}.svg`, svgData, 'image/svg+xml');
+        downloadFile(`quantira-${assetKey.replace('_', '-')}.svg`, svgData, 'image/svg+xml');
       }
     });
   });
@@ -247,7 +272,7 @@ function initAssetDownloads() {
     downloadAllBtn.addEventListener('click', () => {
       Object.keys(SVG_ASSETS).forEach((key, index) => {
         setTimeout(() => {
-          downloadFile(`solis-dynamics-${key.replace('_', '-')}.svg`, SVG_ASSETS[key], 'image/svg+xml');
+          downloadFile(`quantira-${key.replace('_', '-')}.svg`, SVG_ASSETS[key], 'image/svg+xml');
         }, index * 200);
       });
     });
@@ -255,63 +280,41 @@ function initAssetDownloads() {
 }
 
 // --------------------------------------------------------------------------
-// Design Token Exporters (JSON, CSS Variables, Tailwind)
+// Design Token Exporters (Quantira Technologies Specs)
 // --------------------------------------------------------------------------
-const DESIGN_TOKENS = {
-  brand: "SOLIS Dynamics",
-  version: "1.0.0",
-  colors: {
-    primary: {
-      plasma: "#FF6B00",
-      amber: "#FFA800",
-      cyan: "#00F0FF",
-      obsidian: "#090A0F",
-      lumen: "#F8FAFC"
+const QUANTIRA_TOKENS = {
+  brand: "Quantira Technologies",
+  version: "1.0",
+  location: "Hyderabad, India",
+  colorSystem: {
+    dominantCanvas: {
+      name: "Pure White",
+      hex: "#ffffff",
+      rgb: "255, 255, 255",
+      cmyk: "0, 0, 0, 0",
+      ratio: "50%"
     },
-    neutrals: {
-      slate900: "#0F131F",
-      slate800: "#1E293B",
-      slate500: "#64748B",
-      slate300: "#94A3B8"
+    structureText: {
+      name: "Core Black",
+      hex: "#020202",
+      rgb: "2, 2, 2",
+      cmyk: "0, 0, 0, 99",
+      ratio: "30%"
     },
-    semantic: {
-      success: "#10B981",
-      warning: "#F59E0B",
-      danger: "#EF4444",
-      info: "#3B82F6"
+    accentCTA: {
+      name: "Blue Gradient",
+      gradient: "linear-gradient(135deg, #6cbae7 0%, #2a5ba9 100%)",
+      from: "#6cbae7",
+      to: "#2a5ba9",
+      ratio: "20%"
     }
   },
   typography: {
-    display: "Outfit, Space Grotesk, sans-serif",
-    body: "Plus Jakarta Sans, sans-serif",
-    mono: "JetBrains Mono, monospace",
-    scale: {
-      displayXl: "64px",
-      displayL: "48px",
-      h1: "36px",
-      h2: "28px",
-      h3: "22px",
-      body: "16px",
-      small: "14px",
-      caption: "12px"
-    }
+    primaryFont: "Lexend, sans-serif",
+    secondaryFont: "Noto Sans, sans-serif",
+    monoFont: "JetBrains Mono, monospace"
   },
-  spacing: {
-    xs: "4px",
-    sm: "8px",
-    md: "16px",
-    lg: "24px",
-    xl: "32px",
-    "2xl": "48px",
-    "3xl": "64px"
-  },
-  radii: {
-    sm: "6px",
-    md: "12px",
-    lg: "18px",
-    xl: "24px",
-    pill: "9999px"
-  }
+  geometry: "Isometric cube / blockchain quantum lattice"
 };
 
 function initTokenExporters() {
@@ -321,35 +324,25 @@ function initTokenExporters() {
 
   if (exportJsonBtn) {
     exportJsonBtn.addEventListener('click', () => {
-      downloadFile('solis-tokens.json', JSON.stringify(DESIGN_TOKENS, null, 2), 'application/json');
+      downloadFile('quantira-tokens.json', JSON.stringify(QUANTIRA_TOKENS, null, 2), 'application/json');
     });
   }
 
   if (exportCssBtn) {
     exportCssBtn.addEventListener('click', () => {
       const cssContent = `:root {
-  /* SOLIS Dynamics Design Tokens */
-  --solis-plasma: ${DESIGN_TOKENS.colors.primary.plasma};
-  --solis-amber: ${DESIGN_TOKENS.colors.primary.amber};
-  --solis-cyan: ${DESIGN_TOKENS.colors.primary.cyan};
-  --solis-obsidian: ${DESIGN_TOKENS.colors.primary.obsidian};
-  --solis-lumen: ${DESIGN_TOKENS.colors.primary.lumen};
+  /* Quantira Technologies Brand Tokens (v1.0) */
+  --quantira-pure-white: #ffffff;
+  --quantira-core-black: #020202;
+  --quantira-blue-light: #6cbae7;
+  --quantira-blue-deep: #2a5ba9;
+  --quantira-gradient: linear-gradient(135deg, #6cbae7 0%, #2a5ba9 100%);
   
-  --solis-slate-900: ${DESIGN_TOKENS.colors.neutrals.slate900};
-  --solis-slate-800: ${DESIGN_TOKENS.colors.neutrals.slate800};
-  --solis-slate-500: ${DESIGN_TOKENS.colors.neutrals.slate500};
-  --solis-slate-300: ${DESIGN_TOKENS.colors.neutrals.slate300};
-  
-  --font-display: '${DESIGN_TOKENS.typography.display}';
-  --font-sans: '${DESIGN_TOKENS.typography.body}';
-  --font-mono: '${DESIGN_TOKENS.typography.mono}';
-  
-  --radius-sm: ${DESIGN_TOKENS.radii.sm};
-  --radius-md: ${DESIGN_TOKENS.radii.md};
-  --radius-lg: ${DESIGN_TOKENS.radii.lg};
-  --radius-xl: ${DESIGN_TOKENS.radii.xl};
+  --font-primary: 'Lexend', sans-serif;
+  --font-secondary: 'Noto Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }`;
-      downloadFile('solis-tokens.css', cssContent, 'text/css');
+      downloadFile('quantira-tokens.css', cssContent, 'text/css');
     });
   }
 
@@ -360,17 +353,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        solis: {
-          plasma: '${DESIGN_TOKENS.colors.primary.plasma}',
-          amber: '${DESIGN_TOKENS.colors.primary.amber}',
-          cyan: '${DESIGN_TOKENS.colors.primary.cyan}',
-          obsidian: '${DESIGN_TOKENS.colors.primary.obsidian}',
-          lumen: '${DESIGN_TOKENS.colors.primary.lumen}',
+        quantira: {
+          white: '#ffffff',
+          black: '#020202',
+          cyan: '#6cbae7',
+          blue: '#2a5ba9',
         }
       },
       fontFamily: {
-        display: ['Outfit', 'Space Grotesk', 'sans-serif'],
-        sans: ['Plus Jakarta Sans', 'sans-serif'],
+        primary: ['Lexend', 'sans-serif'],
+        secondary: ['Noto Sans', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       }
     }
@@ -387,31 +379,30 @@ module.exports = {
 function initThemeToggle() {
   const toggleBtn = document.getElementById('themeToggleBtn');
   
-  // Check stored preference, default to light-theme
-  const savedTheme = localStorage.getItem('solis-theme');
+  const savedTheme = localStorage.getItem('quantira-theme');
   if (savedTheme === 'dark') {
-    document.body.classList.remove('light-theme');
+    document.body.classList.add('dark-theme');
   } else {
-    document.body.classList.add('light-theme');
+    document.body.classList.remove('dark-theme');
   }
 
   function updateButtonUi() {
     if (!toggleBtn) return;
-    const isLight = document.body.classList.contains('light-theme');
-    toggleBtn.innerHTML = isLight
-      ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg> <span>Dark Mode</span>`
-      : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> <span>Light Mode</span>`;
+    const isDark = document.body.classList.contains('dark-theme');
+    toggleBtn.innerHTML = isDark
+      ? `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> <span>Light Mode</span>`
+      : `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg> <span>Dark Mode</span>`;
   }
 
   updateButtonUi();
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light-theme');
-      const isLight = document.body.classList.contains('light-theme');
-      localStorage.setItem('solis-theme', isLight ? 'light' : 'dark');
+      document.body.classList.toggle('dark-theme');
+      const isDark = document.body.classList.contains('dark-theme');
+      localStorage.setItem('quantira-theme', isDark ? 'dark' : 'light');
       updateButtonUi();
-      showToast(isLight ? 'Switched to Light Mode' : 'Switched to Dark Mode');
+      showToast(isDark ? 'Switched to Dark Mode' : 'Switched to Light Mode');
     });
   }
 
@@ -421,36 +412,6 @@ function initThemeToggle() {
       window.print();
     });
   }
-}
-
-// --------------------------------------------------------------------------
-// Sidebar Search Filter
-// --------------------------------------------------------------------------
-function initSidebarSearch() {
-  const searchInput = document.getElementById('sidebarSearch');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const navGroups = document.querySelectorAll('.nav-group');
-
-  if (!searchInput) return;
-
-  searchInput.addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase().trim();
-
-    navLinks.forEach((link) => {
-      const text = link.textContent.toLowerCase();
-      if (text.includes(query)) {
-        link.style.display = 'flex';
-      } else {
-        link.style.display = 'none';
-      }
-    });
-
-    navGroups.forEach((group) => {
-      const visibleLinks = group.querySelectorAll('.nav-link[style="display: flex;"], .nav-link:not([style*="display: none"])');
-      const hasVisible = Array.from(group.querySelectorAll('.nav-link')).some((l) => l.style.display !== 'none');
-      group.style.display = hasVisible ? 'block' : 'none';
-    });
-  });
 }
 
 // --------------------------------------------------------------------------
