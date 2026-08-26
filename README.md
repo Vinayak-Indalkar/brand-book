@@ -47,7 +47,9 @@ Welcome to the **Quantira Technologies Official Brand Guidelines & Design System
 
 ---
 
-## 🚀 How to View Locally
-- Open **[`index.html`](./index.html)** in any browser, or visit **[http://localhost:3000](http://localhost:3000)**.
+## 🚀 Live Portal & Access
+- 🌐 **Live Website (GitHub Pages)**: **[https://vinayak-indalkar.github.io/brand-book/](https://vinayak-indalkar.github.io/brand-book/)**
+- 💻 **Local Server**: **[http://localhost:3000](http://localhost:3000)**
+- 📦 **GitHub Repository**: **[https://github.com/Vinayak-Indalkar/brand-book](https://github.com/Vinayak-Indalkar/brand-book)**
 
 *© 2026 Quantira Technologies. All Rights Reserved.*
