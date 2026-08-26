@@ -50,19 +50,163 @@
   --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Light Theme Variables */
+/* Light Theme Variables & Overrides */
 body.light-theme {
   --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
   --bg-card-hover: #ffffff;
-  --border-subtle: rgba(0, 0, 0, 0.09);
+  --border-subtle: rgba(0, 0, 0, 0.08);
   --border-active: rgba(255, 107, 0, 0.5);
   --text-primary: #090a0f;
   --text-secondary: #475569;
-  --text-muted: #94a3b8;
-  --grad-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+  --text-muted: #64748b;
+  --grad-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
   --solis-obsidian-card: #ffffff;
+}
+
+body.light-theme .ambient-glow {
+  opacity: 0.07;
+}
+
+body.light-theme .sidebar {
+  background: #ffffff;
+  border-right-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .search-input {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #090a0f;
+}
+
+body.light-theme .search-input:focus {
+  background: #ffffff;
+}
+
+body.light-theme .nav-link {
+  color: #475569;
+}
+
+body.light-theme .nav-link:hover {
+  color: #090a0f;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+body.light-theme .nav-link.active {
+  color: #090a0f;
+  background: linear-gradient(90deg, rgba(255, 107, 0, 0.12) 0%, rgba(255, 107, 0, 0.02) 100%);
+}
+
+body.light-theme .card,
+body.light-theme .pillar-card,
+body.light-theme .voice-matrix,
+body.light-theme .type-family-card,
+body.light-theme .playground-box,
+body.light-theme .logo-card,
+body.light-theme .rule-card,
+body.light-theme .color-card,
+body.light-theme .grad-card,
+body.light-theme .mockup-item,
+body.light-theme .asset-dl-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+body.light-theme .hero-banner {
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.06) 0%, rgba(0, 240, 255, 0.03) 50%, #ffffff 100%);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+body.light-theme .hero-title,
+body.light-theme .stat-val,
+body.light-theme .section-title {
+  color: #090a0f;
+}
+
+body.light-theme .manifesto-box {
+  background: rgba(0, 0, 0, 0.02);
+  color: #1e293b;
+}
+
+body.light-theme .voice-track {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .logo-display-stage {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #090a0f;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+body.light-theme .logo-display-stage.light-bg {
+  background: #090a0f;
+  color: #f8fafc;
+}
+
+body.light-theme .btn-ctrl {
+  background: rgba(0, 0, 0, 0.06);
+  color: #090a0f;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .btn-ctrl:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .btn-ctrl.active {
+  background: var(--solis-plasma);
+  color: #ffffff;
+  border-color: var(--solis-plasma);
+}
+
+body.light-theme .color-val-row:hover {
+  background: rgba(0, 0, 0, 0.04);
+  color: #090a0f;
+}
+
+body.light-theme .grad-code {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+body.light-theme .control-select {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #090a0f;
+}
+
+body.light-theme .playground-output-stage {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .btn-sidebar {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #090a0f;
+}
+
+body.light-theme .btn-sidebar:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+body.light-theme .theme-toggle-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #090a0f;
+}
+
+body.light-theme .theme-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.09);
+}
+
+body.light-theme .download-box {
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.05) 0%, rgba(0, 240, 255, 0.03) 100%);
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 /* Reset & Base Setup */
