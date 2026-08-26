@@ -773,6 +773,241 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 
+/* ==========================================================================
+   TYPOGRAPHY PLAYGROUND (CLEAN SHADCN DROPDOWNS & SLIDERS)
+   ========================================================================== */
+
+.playground-box {
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.playground-box:hover {
+  border-color: #6cbae7;
+  box-shadow: var(--shadow-md);
+}
+
+.playground-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.control-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-title);
+}
+
+.control-label span:last-child {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2a5ba9;
+  background-color: #f0f7fc;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid rgba(108, 186, 231, 0.3);
+}
+
+body.dark-theme .control-label span:last-child {
+  background-color: #0c182c;
+  color: #6cbae7;
+  border-color: rgba(108, 186, 231, 0.2);
+}
+
+/* --- Clean Modern Dropdowns --- */
+.control-select {
+  height: 2.5rem;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--card-border);
+  border-radius: calc(var(--radius) - 2px);
+  color: var(--text-primary);
+  padding: 0 2.25rem 0 0.85rem;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232a5ba9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 14px 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+body.dark-theme .control-select {
+  background-color: #090e17;
+  border-color: #1e293b;
+  color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236cbae7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.control-select:hover {
+  border-color: #94a3b8;
+}
+
+.control-select:focus {
+  border-color: #2a5ba9;
+  box-shadow: 0 0 0 3px rgba(108, 186, 231, 0.25);
+}
+
+body.dark-theme .control-select:focus {
+  border-color: #6cbae7;
+  box-shadow: 0 0 0 3px rgba(108, 186, 231, 0.18);
+}
+
+/* --- Clean Modern Sliders --- */
+.control-input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2rem;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  margin: 0;
+}
+
+.control-input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+  transition: background-color 0.15s ease;
+}
+
+body.dark-theme .control-input[type="range"]::-webkit-slider-runnable-track {
+  background: #1e293b;
+}
+
+.control-input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid #2a5ba9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(42, 91, 169, 0.2);
+  margin-top: -6px;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+body.dark-theme .control-input[type="range"]::-webkit-slider-thumb {
+  background: #020202;
+  border-color: #6cbae7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(108, 186, 231, 0.3);
+}
+
+.control-input[type="range"]:hover::-webkit-slider-thumb {
+  transform: scale(1.15);
+  border-color: #6cbae7;
+}
+
+.control-input[type="range"]:focus::-webkit-slider-thumb,
+.control-input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 4px rgba(108, 186, 231, 0.35);
+}
+
+.control-input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+}
+
+body.dark-theme .control-input[type="range"]::-moz-range-track {
+  background: #1e293b;
+}
+
+.control-input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid #2a5ba9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease;
+}
+
+/* --- Output Stage & Live Text --- */
+.playground-output-stage {
+  min-height: 160px;
+  background-color: #f8fafc;
+  border: 1px dashed var(--card-border);
+  border-radius: calc(var(--radius) - 2px);
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+body.dark-theme .playground-output-stage {
+  background-color: #060b13;
+  border-color: #1e293b;
+}
+
+.playground-editable-text {
+  outline: none;
+  width: 100%;
+  text-align: center;
+  color: var(--text-primary);
+  transition: font-size 0.05s ease, letter-spacing 0.05s ease, line-height 0.05s ease;
+}
+
+.generated-css-code {
+  background-color: #f1f5f9;
+  border: 1px solid var(--card-border);
+  border-radius: calc(var(--radius) - 2px);
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #1e3f7a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+body.dark-theme .generated-css-code {
+  background-color: #0c121e;
+  border-color: #1e293b;
+  color: #6cbae7;
+}
+
+.generated-css-code code {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
 /* Mockups Layout (Matching PDF Page 19 & 20) */
 .mockup-showcase-container {
   display: grid;
