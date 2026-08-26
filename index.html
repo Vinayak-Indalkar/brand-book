@@ -3,42 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOLIS Dynamics — Brand Guidelines (shadcn/ui)</title>
+  <title>Quantira Technologies — Brand Guidelines (v1.0)</title>
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Lexend, Noto Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
-  <!-- Main Stylesheet (shadcn/ui theme) -->
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090A0F'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23FF6B00' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23FFA800'/%3E%3Cellipse cx='32' cy='32' rx='20' ry='6' fill='none' stroke='%2300F0FF' stroke-width='2' transform='rotate(-30 32 32)'/%3E%3C/svg%3E">
+  
+  <!-- Quantira Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='qf' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236CBAE7'/%3E%3Cstop offset='100%25' stop-color='%232A5BA9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23020202'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='url(%23qf)' stroke-width='4'/%3E%3Cline x1='18' y1='46' x2='46' y2='18' stroke='url(%23qf)' stroke-width='3.5' stroke-linecap='round'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='8' fill='none' stroke='%236CBAE7' stroke-width='2' transform='rotate(-30 32 32)'/%3E%3Ccircle cx='46' cy='18' r='3' fill='%236CBAE7'/%3E%3Cpath d='M38 38 L 50 50 L 56 50' fill='none' stroke='url(%23qf)' stroke-width='3.5' stroke-linecap='round'/%3E%3Ccircle cx='56' cy='50' r='3' fill='%232A5BA9'/%3E%3C/svg%3E">
 </head>
-<body class="light-theme">
+<body>
 
   <div class="app-container">
     
     <!-- ====================================================================
-         SHADCN SIDEBAR
+         SIDEBAR NAVIGATION (QUANTIRA DEEP BLUE)
          ==================================================================== -->
     <aside class="sidebar">
       <div class="sidebar-header">
         <a href="#hero" class="brand-badge">
+          <!-- Quantira Vector Icon -->
           <svg class="brand-icon-mini" viewBox="0 0 100 100" fill="none">
-            <circle cx="50" cy="50" r="44" stroke="#FF6B00" stroke-width="6" stroke-dasharray="190 50" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="30" stroke="#FFA800" stroke-width="4" opacity="0.7"/>
-            <circle cx="50" cy="50" r="14" fill="#FF6B00"/>
-            <ellipse cx="50" cy="50" rx="40" ry="12" stroke="#00F0FF" stroke-width="3" transform="rotate(-30 50 50)"/>
+            <defs>
+              <linearGradient id="sideQGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6CBAE7"/>
+                <stop offset="100%" stop-color="#2A5BA9"/>
+              </linearGradient>
+            </defs>
+            <circle cx="45" cy="45" r="32" stroke="url(#sideQGrad)" stroke-width="6"/>
+            <line x1="22" y1="68" x2="68" y2="22" stroke="url(#sideQGrad)" stroke-width="5" stroke-linecap="round"/>
+            <ellipse cx="45" cy="45" rx="42" ry="14" stroke="#6CBAE7" stroke-width="2.5" transform="rotate(-30 45 45)"/>
+            <circle cx="22" cy="68" r="4.5" fill="#2A5BA9"/>
+            <circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
+            <path d="M 54 54 L 75 75 L 85 75" stroke="url(#sideQGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="85" cy="75" r="4.5" fill="#2A5BA9"/>
           </svg>
           <div class="brand-title-wrap">
-            <span class="brand-name">SOLIS</span>
-            <span class="brand-version">shadcn/ui v1.0</span>
+            <span class="brand-name">QUANTIRA</span>
+            <span class="brand-version">Brand Guidelines v1.0</span>
           </div>
         </a>
-        <span class="badge badge-secondary" style="font-size: 0.65rem;">Beta</span>
       </div>
-
-
 
       <!-- Navigation Links -->
       <nav class="sidebar-nav">
@@ -46,51 +55,51 @@
           <div class="nav-group-title">Brand Core</div>
           <a href="#hero" class="nav-link active">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
-            <span>Overview & Hero</span>
+            <span>Overview & Purpose</span>
           </a>
-          <a href="#strategy" class="nav-link">
+          <a href="#positioning" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
-            <span>Strategy & Pillars</span>
-          </a>
-          <a href="#voice" class="nav-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-            <span>Voice & Tone Matrix</span>
+            <span>Positioning & Ecosystem</span>
           </a>
         </div>
 
         <div class="nav-group">
-          <div class="nav-group-title">Visual Identity</div>
+          <div class="nav-group-title">Logo & Identity</div>
           <a href="#logo" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-            <span>Logo System</span>
+            <span>Symbolism & Lockups</span>
           </a>
-          <a href="#rules" class="nav-link">
+          <a href="#safe-space" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>
+            <span>Clear Space & Sizing</span>
+          </a>
+          <a href="#variants" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
-            <span>Logo Dos & Don'ts</span>
+            <span>Logo Variants</span>
           </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title">Color & Typography</div>
           <a href="#colors" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2z"></path></svg>
-            <span>Color Architecture</span>
+            <span>Color Distribution</span>
           </a>
           <a href="#typography" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
-            <span>Typography & Playground</span>
+            <span>Typography (Lexend)</span>
           </a>
-          <a href="#grid" class="nav-link">
+          <a href="#patterns" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg>
-            <span>Spatial Grid & Tokens</span>
+            <span>Isometric Lattice</span>
           </a>
         </div>
 
         <div class="nav-group">
-          <div class="nav-group-title">Components & Export</div>
-          <a href="#mockups" class="nav-link">
+          <div class="nav-group-title">Media & Downloads</div>
+          <a href="#applications" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-            <span>Real-World Mockups</span>
-          </a>
-          <a href="#components" class="nav-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-            <span>shadcn/ui Kit</span>
+            <span>Applications & Merch</span>
           </a>
           <a href="#downloads" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -117,14 +126,14 @@
          ==================================================================== -->
     <main class="main-content">
       
-      <!-- Top Utility Bar (Breadcrumbs & Actions) -->
+      <!-- Top Utility Bar -->
       <div class="top-bar">
         <div class="breadcrumb">
           <a href="#">Brand Portal</a>
           <span class="breadcrumb-separator">/</span>
-          <a href="#">SOLIS Dynamics</a>
+          <a href="#">Quantira Technologies</a>
           <span class="breadcrumb-separator">/</span>
-          <span style="color: hsl(var(--foreground)); font-weight: 500;">Guidelines</span>
+          <span style="color: hsl(var(--foreground)); font-weight: 600;">Guidelines v1.0</span>
         </div>
 
         <div class="top-actions">
@@ -138,152 +147,119 @@
       <!-- Hero Banner -->
       <section id="hero" class="hero-banner">
         <div class="hero-content">
-          <div style="margin-bottom: 0.75rem;">
-            <span class="badge badge-solar">Design System 2026</span>
+          <div style="margin-bottom: 0.85rem;">
+            <span class="badge badge-gradient">Official Guidelines v1.0</span>
+            <span class="badge badge-secondary" style="margin-left: 0.35rem;">Hyderabad, India</span>
           </div>
-          <h1 class="hero-title">SOLIS <span class="highlight">DYNAMICS</span></h1>
+          <h1 class="hero-title">QUANTIRA <span class="highlight">TECHNOLOGIES</span></h1>
           <p class="hero-tagline">
-            Powering Tomorrow's Horizons with intelligent clean energy, adaptive hardware architectures, and radiant shadcn/ui design precision.
+            A Hyderabad-based software solutions company creating agile, future-ready digital ecosystems and resilient IT infrastructures.
           </p>
 
           <div class="hero-stats">
             <div class="stat-item">
-              <span class="stat-val">4</span>
-              <span class="stat-lbl">Core Pillars</span>
+              <span class="stat-val">Hyderabad</span>
+              <span class="stat-lbl">Global Headquarters</span>
             </div>
             <div class="stat-item">
-              <span class="stat-val">100%</span>
-              <span class="stat-lbl">Vector System</span>
+              <span class="stat-val">50 / 30 / 20</span>
+              <span class="stat-lbl">Color Ratio (White/Black/Blue)</span>
             </div>
             <div class="stat-item">
-              <span class="stat-val">WCAG AAA</span>
-              <span class="stat-lbl">Accessibility</span>
+              <span class="stat-val">Lexend</span>
+              <span class="stat-lbl">Primary Typeface</span>
             </div>
             <div class="stat-item">
-              <span class="stat-val">8pt</span>
-              <span class="stat-lbl">Spatial Grid</span>
+              <span class="stat-val">Phi ($\varnothing$) + Q</span>
+              <span class="stat-lbl">Identity Symbolism</span>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ==================================================================
-           01. BRAND STRATEGY & MANIFESTO
+           01. BRAND POSITIONING & OVERVIEW
            ================================================================== -->
-      <section id="strategy" class="brand-section">
+      <section id="positioning" class="brand-section">
         <div class="section-header">
           <div class="section-tag">
-            <span class="badge badge-outline">01 / Strategy</span>
+            <span class="badge badge-outline">01 / Brand Overview</span>
           </div>
-          <h2 class="section-title">Brand Core & Philosophy</h2>
+          <h2 class="section-title">Company & Strategic Positioning</h2>
           <p class="section-desc">
-            SOLIS Dynamics exists at the intersection of radiant solar physics and artificial intelligence. Our brand identity expresses unrelenting technological ambition grounded in ecological stewardship.
+            Quantira Technologies architects enterprise software solutions and mission-critical IT infrastructure that empower businesses to scale securely into the quantum era.
           </p>
         </div>
 
         <div class="manifesto-box">
-          “Energy is not merely a utility; it is the fundamental catalyst of human potential. When we harmonize quantum intelligence with clean solar flux, we liberate civilization to explore boundless horizons.”
+          “At Quantira Technologies, we combine mathematical precision with agile engineering to build digital ecosystems that withstand disruption and accelerate enterprise growth.”
         </div>
 
-        <div class="pillars-grid">
+        <div class="pillars-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
           <div class="card">
             <div class="card-header">
               <div class="pillar-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
               </div>
-              <h3 class="card-title">Luminous Precision</h3>
-              <p class="card-description">Uncompromising engineering rigor, mathematically flawless systems, and laser-sharp clarity in every interface.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <div class="pillar-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2a10 10 0 0 0-7.55 16.57L12 22l7.55-3.43A10 10 0 0 0 12 2z"></path><path d="M12 6v6l4 2"></path></svg>
-              </div>
-              <h3 class="card-title">Adaptive Harmony</h3>
-              <p class="card-description">Eco-symbiotic technology that self-calibrates in real-time to preserve our biosphere and empower human lifestyles.</p>
+              <h3 class="card-title">Agile Digital Ecosystems</h3>
+              <p class="card-description">Scalable cloud-native architectures and custom enterprise platforms built for seamless cross-system integration.</p>
             </div>
           </div>
 
           <div class="card">
             <div class="card-header">
               <div class="pillar-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
               </div>
-              <h3 class="card-title">Unbounded Vision</h3>
-              <p class="card-description">Fearless exploration that anticipates the energy and spatial demands of the next century, today.</p>
+              <h3 class="card-title">Resilient IT Infrastructure</h3>
+              <p class="card-description">High-availability fault-tolerant server systems, quantum-resilient encryption, and disaster-proof data nodes.</p>
             </div>
           </div>
 
           <div class="card">
             <div class="card-header">
               <div class="pillar-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
               </div>
-              <h3 class="card-title">Transparent Trust</h3>
-              <p class="card-description">Open-source telemetry, verifiable carbon offsets, and uncompromising integrity in data and operations.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tone of Voice Section -->
-        <div id="voice" class="card" style="padding: 1.5rem;">
-          <h3 class="card-title" style="margin-bottom: 0.35rem;">Tone of Voice Matrix</h3>
-          <p class="card-description" style="margin-bottom: 1.5rem;">
-            Our verbal voice is authoritative yet inspiring, technical yet profoundly accessible.
-          </p>
-
-          <div class="voice-slider-item">
-            <div class="voice-labels">
-              <span>Technical & Precise</span>
-              <span style="color: hsl(var(--primary));">80% / 20%</span>
-              <span>Jargon-Free & Accessible</span>
-            </div>
-            <div class="voice-track">
-              <div class="voice-fill" style="width: 78%;"></div>
-            </div>
-          </div>
-
-          <div class="voice-slider-item">
-            <div class="voice-labels">
-              <span>Visionary & Bold</span>
-              <span style="color: hsl(var(--primary));">85% / 15%</span>
-              <span>Cautious & Conservative</span>
-            </div>
-            <div class="voice-track">
-              <div class="voice-fill" style="width: 85%;"></div>
-            </div>
-          </div>
-
-          <div class="voice-slider-item">
-            <div class="voice-labels">
-              <span>Warm & Human</span>
-              <span style="color: hsl(var(--primary));">70% / 30%</span>
-              <span>Cold & Detached</span>
-            </div>
-            <div class="voice-track">
-              <div class="voice-fill" style="width: 70%;"></div>
+              <h3 class="card-title">Hyderabad Technology Hub</h3>
+              <p class="card-description">Headquartered in HITEC City / Hyderabad, powering global technology delivery across North America, Europe, and Asia-Pacific.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ==================================================================
-           02. LOGO SYSTEM & RULES
+           02. LOGO & IDENTITY RULES
            ================================================================== -->
       <section id="logo" class="brand-section">
         <div class="section-header">
           <div class="section-tag">
             <span class="badge badge-outline">02 / Logo System</span>
           </div>
-          <h2 class="section-title">Master Logo & Architecture</h2>
+          <h2 class="section-title">Origin & Identity Symbolism</h2>
           <p class="section-desc">
-            The SOLIS Dynamics mark combines the Helical Solar Monogram with a high-contrast geometric wordmark. Use the interactive controls below to inspect construction grids and background adaptability.
+            The Quantira Technologies logo mark combines three foundational concepts into a unified, stylized letter <strong>"Q"</strong>:
           </p>
         </div>
 
-        <!-- Interactive Logo Stage -->
+        <!-- Symbolism Breakdown Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.75rem;">
+          <div class="card" style="padding: 1.25rem;">
+            <div style="font-family: var(--font-primary); font-weight: 700; color: #2a5ba9; font-size: 1.2rem; margin-bottom: 0.25rem;">01. Phi Symbol ($\varnothing$)</div>
+            <p class="card-description">Mathematical balance, golden ratio, and structural harmony in system engineering.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem;">
+            <div style="font-family: var(--font-primary); font-weight: 700; color: #2a5ba9; font-size: 1.2rem; margin-bottom: 0.25rem;">02. Planetary Orbit</div>
+            <p class="card-description">Global reach, orbital momentum, and interconnected digital ecosystems.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem;">
+            <div style="font-family: var(--font-primary); font-weight: 700; color: #2a5ba9; font-size: 1.2rem; margin-bottom: 0.25rem;">03. Quantum Circuit</div>
+            <p class="card-description">Nodes, circuit traces, and qubit terminals forming the agile Q tail.</p>
+          </div>
+        </div>
+
+        <!-- Primary Master Horizontal Lockup Stage -->
+        <h3 class="card-title" style="margin-bottom: 0.75rem;">Primary Horizontal Lockup</h3>
         <div id="primaryLogoStage" class="logo-display-stage">
           <div id="logoGridOverlay" class="grid-overlay"></div>
           
@@ -297,243 +273,283 @@
             </button>
           </div>
 
-          <!-- Master SVG Graphic -->
-          <svg viewBox="0 0 480 120" style="max-width: 420px; width: 100%; height: auto;">
+          <!-- Master Vector SVG -->
+          <svg viewBox="0 0 520 120" style="max-width: 480px; width: 100%; height: auto;">
             <defs>
-              <linearGradient id="mainSolisGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#FF6B00"/>
-                <stop offset="60%" stop-color="#FFA800"/>
-                <stop offset="100%" stop-color="#00F0FF"/>
+              <linearGradient id="mainStageQGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6CBAE7"/>
+                <stop offset="100%" stop-color="#2A5BA9"/>
               </linearGradient>
             </defs>
             <g transform="translate(20, 15)">
-              <circle cx="45" cy="45" r="42" fill="none" stroke="url(#mainSolisGlow)" stroke-width="6" stroke-dasharray="180 50" stroke-linecap="round"/>
-              <circle cx="45" cy="45" r="28" fill="none" stroke="#FF6B00" stroke-width="4" opacity="0.6"/>
-              <circle cx="45" cy="45" r="14" fill="#FFA800"/>
-              <ellipse cx="45" cy="45" rx="38" ry="12" fill="none" stroke="#00F0FF" stroke-width="3" transform="rotate(-30 45 45)"/>
+              <circle cx="45" cy="45" r="32" fill="none" stroke="url(#mainStageQGrad)" stroke-width="6"/>
+              <line x1="22" y1="68" x2="68" y2="22" stroke="url(#mainStageQGrad)" stroke-width="5" stroke-linecap="round"/>
+              <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#6CBAE7" stroke-width="2.5" transform="rotate(-30 45 45)"/>
+              <circle cx="22" cy="68" r="4.5" fill="#2A5BA9"/>
+              <circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
+              <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="url(#mainStageQGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="85" cy="75" r="4.5" fill="#2A5BA9"/>
             </g>
-            <text x="130" y="65" font-family="'Outfit', sans-serif" font-size="44" font-weight="800" fill="currentColor" letter-spacing="4">SOLIS</text>
-            <text x="132" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#FF6B00" letter-spacing="9">DYNAMICS</text>
+            <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="currentColor" letter-spacing="2.5">QUANTIRA</text>
+            <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#2A5BA9" letter-spacing="7">TECHNOLOGIES</text>
           </svg>
         </div>
 
-        <!-- Logo Variations Grid -->
+        <!-- Clear Space / Safe Zone -->
+        <div id="safe-space" class="section-header" style="margin-top: 3rem;">
+          <h3 class="section-title" style="font-size: 1.4rem;">Clear Space & Safe Size Rule</h3>
+          <p class="section-desc">
+            To ensure optimal legibility and brand impact, the logo must always maintain an exclusion zone defined by <strong>$X$</strong> (proportional to the diameter of the central Phi node) on all four sides. No text or graphic elements may enter this boundary.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #fafafa;">
+          <div class="safe-space-box">
+            <span class="safe-space-marker" style="top: 8px; left: 50%; transform: translateX(-50%);">Margin X</span>
+            <span class="safe-space-marker" style="bottom: 8px; left: 50%; transform: translateX(-50%);">Margin X</span>
+            <span class="safe-space-marker" style="left: 8px; top: 50%; transform: translateY(-50%);">X</span>
+            <span class="safe-space-marker" style="right: 8px; top: 50%; transform: translateY(-50%);">X</span>
+
+            <svg viewBox="0 0 520 120" width="380" height="88">
+              <defs>
+                <linearGradient id="safeZoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#6CBAE7"/><stop offset="100%" stop-color="#2A5BA9"/>
+                </linearGradient>
+              </defs>
+              <g transform="translate(20, 15)">
+                <circle cx="45" cy="45" r="32" fill="none" stroke="url(#safeZoneGrad)" stroke-width="6"/>
+                <line x1="22" y1="68" x2="68" y2="22" stroke="url(#safeZoneGrad)" stroke-width="5" stroke-linecap="round"/>
+                <ellipse cx="45" cy="45" rx="42" ry="14" fill="none" stroke="#6CBAE7" stroke-width="2.5" transform="rotate(-30 45 45)"/>
+                <circle cx="22" cy="68" r="4.5" fill="#2A5BA9"/>
+                <circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
+                <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="url(#safeZoneGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="85" cy="75" r="4.5" fill="#2A5BA9"/>
+              </g>
+              <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="#020202" letter-spacing="2.5">QUANTIRA</text>
+              <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#2A5BA9" letter-spacing="7">TECHNOLOGIES</text>
+            </svg>
+          </div>
+          <div style="margin-top: 1.25rem; font-size: 0.85rem; color: hsl(var(--muted-foreground)); text-align: center;">
+            <strong>Minimum Digital Size:</strong> 36px height &nbsp;|&nbsp; <strong>Minimum Print Size:</strong> 22mm height
+          </div>
+        </div>
+
+        <!-- Official Logo Variants -->
+        <div id="variants" class="section-header" style="margin-top: 3rem;">
+          <h3 class="section-title" style="font-size: 1.4rem;">Official Logo Variants</h3>
+          <p class="section-desc">Four standardized formats for diverse digital and physical touchpoints.</p>
+        </div>
+
         <div class="logo-variants-grid">
-          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; align-items: center;">
-            <div class="logo-preview-box dark">
-              <svg viewBox="0 0 120 120" width="70" height="70">
-                <defs>
-                  <linearGradient id="cardMonoGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FF6B00"/><stop offset="100%" stop-color="#00F0FF"/>
-                  </linearGradient>
-                </defs>
-                <circle cx="60" cy="60" r="42" fill="none" stroke="url(#cardMonoGlow)" stroke-width="6" stroke-dasharray="180 50" stroke-linecap="round"/>
-                <circle cx="60" cy="60" r="28" fill="none" stroke="#FF6B00" stroke-width="4" opacity="0.6"/>
-                <circle cx="60" cy="60" r="14" fill="#FFA800"/>
-                <ellipse cx="60" cy="60" rx="38" ry="12" fill="none" stroke="#00F0FF" stroke-width="3" transform="rotate(-30 60 60)"/>
-              </svg>
-            </div>
-            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Helical Monogram</div>
-            <button class="btn btn-outline btn-sm" data-download-svg="monogram">Download SVG</button>
-          </div>
-
-          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; align-items: center;">
-            <div class="logo-preview-box dark">
-              <svg viewBox="0 0 480 120" width="160" height="40">
-                <g transform="translate(20, 15)">
-                  <circle cx="45" cy="45" r="42" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-dasharray="180 50" stroke-linecap="round"/>
-                  <circle cx="45" cy="45" r="14" fill="#FFFFFF"/>
-                </g>
-                <text x="130" y="65" font-family="'Outfit', sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="4">SOLIS</text>
-                <text x="132" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="9" opacity="0.8">DYNAMICS</text>
-              </svg>
-            </div>
-            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Dark Mono Lockup</div>
-            <button class="btn btn-outline btn-sm" data-download-svg="dark_mono">Download SVG</button>
-          </div>
-
+          <!-- 1. Full Color Gradient -->
           <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; align-items: center;">
             <div class="logo-preview-box light">
-              <svg viewBox="0 0 480 120" width="160" height="40">
-                <g transform="translate(20, 15)">
-                  <circle cx="45" cy="45" r="42" fill="none" stroke="#090A0F" stroke-width="6" stroke-dasharray="180 50" stroke-linecap="round"/>
-                  <circle cx="45" cy="45" r="14" fill="#090A0F"/>
-                </g>
-                <text x="130" y="65" font-family="'Outfit', sans-serif" font-size="44" font-weight="800" fill="#090A0F" letter-spacing="4">SOLIS</text>
-                <text x="132" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#090A0F" letter-spacing="9" opacity="0.8">DYNAMICS</text>
+              <svg viewBox="0 0 520 120" width="180" height="42">
+                <defs><linearGradient id="v1g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6CBAE7"/><stop offset="100%" stop-color="#2A5BA9"/></linearGradient></defs>
+                <circle cx="45" cy="45" r="32" fill="none" stroke="url(#v1g)" stroke-width="6"/>
+                <line x1="22" y1="68" x2="68" y2="22" stroke="url(#v1g)" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="22" cy="68" r="4.5" fill="#2A5BA9"/><circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
+                <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="url(#v1g)" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="85" cy="75" r="4.5" fill="#2A5BA9"/>
+                <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="#020202" letter-spacing="2.5">QUANTIRA</text>
+                <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#2A5BA9" letter-spacing="7">TECHNOLOGIES</text>
               </svg>
             </div>
-            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Light Mono Lockup</div>
-            <button class="btn btn-outline btn-sm" data-download-svg="light_mono">Download SVG</button>
+            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Full Color Gradient</div>
+            <button class="btn btn-outline btn-sm" data-download-svg="master_gradient">Download SVG</button>
           </div>
 
+          <!-- 2. Dark Background Format -->
           <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; align-items: center;">
             <div class="logo-preview-box dark">
-              <svg viewBox="0 0 64 64" width="50" height="50">
-                <rect width="64" height="64" rx="14" fill="#111420" stroke="rgba(255,255,255,0.1)"/>
-                <circle cx="32" cy="32" r="20" fill="none" stroke="#FF6B00" stroke-width="3" stroke-linecap="round"/>
-                <circle cx="32" cy="32" r="7" fill="#FFA800"/>
-                <ellipse cx="32" cy="32" rx="18" ry="5" fill="none" stroke="#00F0FF" stroke-width="2" transform="rotate(-30 32 32)"/>
+              <svg viewBox="0 0 520 120" width="180" height="42">
+                <defs><linearGradient id="v2g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6CBAE7"/><stop offset="100%" stop-color="#2A5BA9"/></linearGradient></defs>
+                <circle cx="45" cy="45" r="32" fill="none" stroke="url(#v2g)" stroke-width="6"/>
+                <line x1="22" y1="68" x2="68" y2="22" stroke="url(#v2g)" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="22" cy="68" r="4.5" fill="#6CBAE7"/><circle cx="68" cy="22" r="4.5" fill="#6CBAE7"/>
+                <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="url(#v2g)" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="85" cy="75" r="4.5" fill="#6CBAE7"/>
+                <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="#FFFFFF" letter-spacing="2.5">QUANTIRA</text>
+                <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#6CBAE7" letter-spacing="7">TECHNOLOGIES</text>
               </svg>
             </div>
-            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">App Icon / Favicon</div>
-            <button class="btn btn-outline btn-sm" data-download-svg="favicon">Download SVG</button>
-          </div>
-        </div>
-
-        <!-- Dos and Don'ts -->
-        <div id="rules" class="section-header" style="margin-top: 3rem;">
-          <h3 class="section-title" style="font-size: 1.4rem;">Logo Misuse & Rules</h3>
-          <p class="section-desc">To maintain brand consistency and authority, strictly follow these usage guidelines.</p>
-        </div>
-
-        <div class="rules-grid">
-          <div class="card" style="overflow: hidden;">
-            <div class="rule-visual">
-              <span class="badge badge-success rule-badge">✓ Correct</span>
-              <svg viewBox="0 0 240 60" width="150" height="38">
-                <circle cx="25" cy="30" r="18" fill="none" stroke="#FF6B00" stroke-width="3"/>
-                <circle cx="25" cy="30" r="7" fill="#FFA800"/>
-                <text x="55" y="38" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="currentColor">SOLIS</text>
-              </svg>
-            </div>
-            <div class="card-header" style="padding: 1rem;">
-              <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Maintain Aspect Ratio</div>
-              <p class="card-description">Always preserve official proportions with minimum clear space around the mark.</p>
-            </div>
+            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Dark Format</div>
+            <button class="btn btn-outline btn-sm" data-download-svg="dark_format">Download SVG</button>
           </div>
 
-          <div class="card" style="overflow: hidden;">
-            <div class="rule-visual">
-              <span class="badge badge-secondary rule-badge" style="color: #ef4444; border-color: rgba(239,68,68,0.3);">✕ Don't</span>
-              <svg viewBox="0 0 240 60" width="150" height="38" style="transform: scaleX(1.4);">
-                <circle cx="25" cy="30" r="18" fill="none" stroke="#FF6B00" stroke-width="3"/>
-                <circle cx="25" cy="30" r="7" fill="#FFA800"/>
-                <text x="55" y="38" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="currentColor">SOLIS</text>
+          <!-- 3. Outline Version -->
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; align-items: center;">
+            <div class="logo-preview-box light">
+              <svg viewBox="0 0 520 120" width="180" height="42">
+                <circle cx="45" cy="45" r="32" fill="none" stroke="#2A5BA9" stroke-width="3"/>
+                <line x1="22" y1="68" x2="68" y2="22" stroke="#2A5BA9" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="22" cy="68" r="3" fill="none" stroke="#2A5BA9" stroke-width="2"/>
+                <circle cx="68" cy="22" r="3" fill="none" stroke="#2A5BA9" stroke-width="2"/>
+                <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="#2A5BA9" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="85" cy="75" r="3" fill="none" stroke="#2A5BA9" stroke-width="2"/>
+                <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="700" fill="none" stroke="#020202" stroke-width="1.5" letter-spacing="2.5">QUANTIRA</text>
+                <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#2A5BA9" letter-spacing="7">TECHNOLOGIES</text>
               </svg>
             </div>
-            <div class="card-header" style="padding: 1rem;">
-              <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Do Not Stretch</div>
-              <p class="card-description">Never scale horizontally or vertically disproportionately.</p>
-            </div>
+            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Outline Version</div>
+            <button class="btn btn-outline btn-sm" data-download-svg="outline_version">Download SVG</button>
           </div>
 
-          <div class="card" style="overflow: hidden;">
-            <div class="rule-visual">
-              <span class="badge badge-secondary rule-badge" style="color: #ef4444; border-color: rgba(239,68,68,0.3);">✕ Don't</span>
-              <svg viewBox="0 0 240 60" width="150" height="38" style="transform: rotate(-15deg);">
-                <circle cx="25" cy="30" r="18" fill="none" stroke="#FF6B00" stroke-width="3"/>
-                <circle cx="25" cy="30" r="7" fill="#FFA800"/>
-                <text x="55" y="38" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="currentColor">SOLIS</text>
+          <!-- 4. Mono-Color High Contrast -->
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; align-items: center;">
+            <div class="logo-preview-box light">
+              <svg viewBox="0 0 520 120" width="180" height="42">
+                <circle cx="45" cy="45" r="32" fill="none" stroke="#020202" stroke-width="6"/>
+                <line x1="22" y1="68" x2="68" y2="22" stroke="#020202" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="22" cy="68" r="4.5" fill="#020202"/><circle cx="68" cy="22" r="4.5" fill="#020202"/>
+                <path d="M 54 54 L 75 75 L 85 75" fill="none" stroke="#020202" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="85" cy="75" r="4.5" fill="#020202"/>
+                <text x="135" y="62" font-family="'Lexend', sans-serif" font-size="38" font-weight="800" fill="#020202" letter-spacing="2.5">QUANTIRA</text>
+                <text x="137" y="88" font-family="'Noto Sans', sans-serif" font-size="13" font-weight="600" fill="#020202" letter-spacing="7">TECHNOLOGIES</text>
               </svg>
             </div>
-            <div class="card-header" style="padding: 1rem;">
-              <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Do Not Rotate</div>
-              <p class="card-description">The logo lockup must always be presented horizontally in standard orientation.</p>
-            </div>
+            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Mono-Color Print</div>
+            <button class="btn btn-outline btn-sm" data-download-svg="mono_black">Download SVG</button>
           </div>
         </div>
       </section>
 
       <!-- ==================================================================
-           03. COLOR ARCHITECTURE & TOKENS
+           03. COLOR SYSTEM & DISTRIBUTION
            ================================================================== -->
       <section id="colors" class="brand-section">
         <div class="section-header">
           <div class="section-tag">
-            <span class="badge badge-outline">03 / Color</span>
+            <span class="badge badge-outline">03 / Color System</span>
           </div>
-          <h2 class="section-title">Color Architecture & Tokens</h2>
+          <h2 class="section-title">Color System & Distribution</h2>
           <p class="section-desc">
-            Our chromatic palette radiates high-energy solar heat contrasted against clean neutral surfaces. Click any color row to copy.
+            Quantira adheres to a disciplined <strong>50% / 30% / 20%</strong> spatial color hierarchy for maximum clarity, professional tech authority, and accessibility.
           </p>
         </div>
 
-        <h3 class="card-title" style="margin-bottom: 0.875rem;">Primary Core Palette</h3>
         <div class="color-palette-grid">
           
-          <div class="color-card" data-copy="#FF6B00">
-            <div class="color-swatch-box" style="background: #FF6B00;">
-              <span class="wcag-badge">AAA 4.5:1</span>
+          <!-- Dominant Canvas (50%) -->
+          <div class="color-card" data-copy="#ffffff">
+            <div class="color-swatch-box" style="background: #ffffff; border-bottom: 1px solid #e2e8f0;">
+              <span class="ratio-badge" style="background: #020202; color: #fff;">50% Ratio</span>
+              <span class="badge badge-outline" style="background: #fff; font-size: 0.65rem;">Canvas</span>
             </div>
             <div class="color-details">
-              <div class="color-name">Solar Plasma</div>
-              <div class="color-role">Primary Accent</div>
-              <div class="color-val-row" data-copy="#FF6B00"><span>HEX</span><span>#FF6B00</span><span class="copy-hint">Copy</span></div>
-              <div class="color-val-row" data-copy="rgb(255, 107, 0)"><span>RGB</span><span>255, 107, 0</span><span class="copy-hint">Copy</span></div>
-              <div class="color-val-row" data-copy="hsl(25, 100%, 50%)"><span>HSL</span><span>25°, 100%, 50%</span><span class="copy-hint">Copy</span></div>
+              <div class="color-name">Pure White</div>
+              <div class="color-role">Dominant Canvas (50%)</div>
+              <p style="font-size: 0.75rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.75rem;">
+                Primary background providing breathing room and high visual cleanliness.
+              </p>
+              <div class="color-val-row" data-copy="#ffffff"><span>HEX</span><span>#ffffff</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="rgb(255, 255, 255)"><span>RGB</span><span>255, 255, 255</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="cmyk(0, 0, 0, 0)"><span>CMYK</span><span>0, 0, 0, 0</span><span class="copy-hint">Copy</span></div>
             </div>
           </div>
 
-          <div class="color-card" data-copy="#FFA800">
-            <div class="color-swatch-box" style="background: #FFA800;">
-              <span class="wcag-badge">AAA 5.2:1</span>
+          <!-- Structure / Text (30%) -->
+          <div class="color-card" data-copy="#020202">
+            <div class="color-swatch-box" style="background: #020202;">
+              <span class="ratio-badge" style="background: #2a5ba9; color: #fff;">30% Ratio</span>
+              <span class="badge badge-black" style="font-size: 0.65rem; border: 1px solid rgba(255,255,255,0.2);">Structure</span>
             </div>
             <div class="color-details">
-              <div class="color-name">Photon Amber</div>
-              <div class="color-role">Secondary Warm</div>
-              <div class="color-val-row" data-copy="#FFA800"><span>HEX</span><span>#FFA800</span><span class="copy-hint">Copy</span></div>
-              <div class="color-val-row" data-copy="rgb(255, 168, 0)"><span>RGB</span><span>255, 168, 0</span><span class="copy-hint">Copy</span></div>
-              <div class="color-val-row" data-copy="hsl(39, 100%, 50%)"><span>HSL</span><span>39°, 100%, 50%</span><span class="copy-hint">Copy</span></div>
+              <div class="color-name">Core Black</div>
+              <div class="color-role">Structure / Text (30%)</div>
+              <p style="font-size: 0.75rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.75rem;">
+                Typography, high-contrast layouts, structural borders, and dark modes.
+              </p>
+              <div class="color-val-row" data-copy="#020202"><span>HEX</span><span>#020202</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="rgb(2, 2, 2)"><span>RGB</span><span>2, 2, 2</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="cmyk(0, 0, 0, 99)"><span>CMYK</span><span>0, 0, 0, 99</span><span class="copy-hint">Copy</span></div>
             </div>
           </div>
 
-          <div class="color-card" data-copy="#00F0FF">
-            <div class="color-swatch-box" style="background: #00F0FF;">
-              <span class="wcag-badge" style="color: #000;">AAA 11.2:1</span>
+          <!-- Accent / CTA (20%) -->
+          <div class="color-card" data-copy="linear-gradient(135deg, #6cbae7 0%, #2a5ba9 100%)">
+            <div class="color-swatch-box" style="background: linear-gradient(135deg, #6cbae7 0%, #2a5ba9 100%);">
+              <span class="ratio-badge" style="background: #020202; color: #fff;">20% Ratio</span>
+              <span class="badge badge-gradient" style="font-size: 0.65rem;">Accent / CTA</span>
             </div>
             <div class="color-details">
-              <div class="color-name">Hyper Cyan</div>
-              <div class="color-role">Luminescence</div>
-              <div class="color-val-row" data-copy="#00F0FF"><span>HEX</span><span>#00F0FF</span><span class="copy-hint">Copy</span></div>
-              <div class="color-val-row" data-copy="rgb(0, 240, 255)"><span>RGB</span><span>0, 240, 255</span><span class="copy-hint">Copy</span></div>
-              <div class="color-val-row" data-copy="hsl(184, 100%, 50%)"><span>HSL</span><span>184°, 100%, 50%</span><span class="copy-hint">Copy</span></div>
-            </div>
-          </div>
-
-          <div class="color-card" data-copy="#090A0F">
-            <div class="color-swatch-box" style="background: #090A0F; border-bottom: 1px solid rgba(255,255,255,0.1);">
-              <span class="wcag-badge">Base Dark</span>
-            </div>
-            <div class="color-details">
-              <div class="color-name">Obsidian Void</div>
-              <div class="color-role">Deep Neutral</div>
-              <div class="color-val-row" data-copy="#090A0F"><span>HEX</span><span>#090A0F</span><span class="copy-hint">Copy</span></div>
-              <div class="color-val-row" data-copy="rgb(9, 10, 15)"><span>RGB</span><span>9, 10, 15</span><span class="copy-hint">Copy</span></div>
-              <div class="color-val-row" data-copy="hsl(230, 25%, 5%)"><span>HSL</span><span>230°, 25%, 5%</span><span class="copy-hint">Copy</span></div>
+              <div class="color-name">Blue Gradient</div>
+              <div class="color-role">Accent / CTA (20%)</div>
+              <p style="font-size: 0.75rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.75rem;">
+                Used for interactive elements, highlights, and key brand moments.
+              </p>
+              <div class="color-val-row" data-copy="#6cbae7"><span>From (Sky)</span><span>#6cbae7</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="#2a5ba9"><span>To (Deep)</span><span>#2a5ba9</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="linear-gradient(135deg, #6cbae7 0%, #2a5ba9 100%)"><span>CSS</span><span>Grad 135°</span><span class="copy-hint">Copy</span></div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ==================================================================
-           04. TYPOGRAPHY SYSTEM & LIVE PLAYGROUND
+           04. TYPOGRAPHY HIERARCHY & SANDBOX
            ================================================================== -->
       <section id="typography" class="brand-section">
         <div class="section-header">
           <div class="section-tag">
             <span class="badge badge-outline">04 / Typography</span>
           </div>
-          <h2 class="section-title">Typography & Live Sandbox</h2>
+          <h2 class="section-title">Typography Hierarchy</h2>
           <p class="section-desc">
-            Our type family blends futuristic geometric geometry (Outfit) with razor-sharp legible UI sans-serif (Plus Jakarta Sans).
+            Pairing <strong>Lexend</strong> for maximum title legibility and structural confidence with <strong>Noto Sans</strong> for universal body readability.
           </p>
         </div>
 
-        <!-- Interactive Playground -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+          <!-- Primary Font Card -->
+          <div class="card" style="padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="badge badge-secondary">Primary Typeface</span>
+              <span style="font-size: 0.75rem; color: hsl(var(--muted-foreground)); font-family: var(--font-mono);">Titles & Headings</span>
+            </div>
+            <div style="font-family: 'Lexend', sans-serif; font-size: 1.75rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem;">
+              Lexend Font
+            </div>
+            <p class="card-description" style="margin-bottom: 1rem;">
+              Used for Titles, Headings, and Lead copy to enhance readability and cognitive processing speed.
+            </p>
+            <div style="font-family: 'Lexend', sans-serif; font-size: 0.9rem; color: #2a5ba9; letter-spacing: 0.05em;">
+              ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+              abcdefghijklmnopqrstuvwxyz 0123456789
+            </div>
+          </div>
+
+          <!-- Secondary Font Card -->
+          <div class="card" style="padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="badge badge-outline">Secondary Typeface</span>
+              <span style="font-size: 0.75rem; color: hsl(var(--muted-foreground)); font-family: var(--font-mono);">Body & UI</span>
+            </div>
+            <div style="font-family: 'Noto Sans', sans-serif; font-size: 1.75rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.5rem;">
+              Noto Sans
+            </div>
+            <p class="card-description" style="margin-bottom: 1rem;">
+              Used for Body paragraphs, UI buttons, functional links, data telemetry, and documentation.
+            </p>
+            <div style="font-family: 'Noto Sans', sans-serif; font-size: 0.9rem; color: #71717a;">
+              Universal glyph support, clean geometric proportions, and optical clarity at small pixel sizes.
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Type Sandbox -->
         <div class="playground-box">
-          <h3 class="card-title" style="margin-bottom: 0.25rem;">Interactive Type Playground</h3>
+          <h3 class="card-title" style="margin-bottom: 0.25rem;">Live Typography Playground</h3>
           <p class="card-description" style="margin-bottom: 1.25rem;">
-            Test custom headlines, adjust sliders in real-time, and copy the generated CSS rules.
+            Test Quantira slogans and headlines with live sliders.
           </p>
 
           <div class="playground-controls">
             <div class="control-group">
               <label class="control-label">Font Family</label>
               <select id="typeFont" class="control-select">
-                <option value="Outfit">Outfit (Display)</option>
-                <option value="Space Grotesk">Space Grotesk (Futuristic)</option>
-                <option value="Plus Jakarta Sans">Plus Jakarta Sans (UI)</option>
+                <option value="Lexend" selected>Lexend (Headings)</option>
+                <option value="Noto Sans">Noto Sans (Body & UI)</option>
                 <option value="JetBrains Mono">JetBrains Mono (Code)</option>
               </select>
             </div>
@@ -541,15 +557,16 @@
             <div class="control-group">
               <label class="control-label">
                 <span>Font Size</span>
-                <span id="typeSizeVal" style="color: hsl(var(--primary)); font-weight: 600;">52px</span>
+                <span id="typeSizeVal" style="color: #2a5ba9; font-weight: 700;">48px</span>
               </label>
-              <input type="range" id="typeSize" class="control-input" min="16" max="96" value="52">
+              <input type="range" id="typeSize" class="control-input" min="16" max="96" value="48">
             </div>
 
             <div class="control-group">
               <label class="control-label">Weight</label>
               <select id="typeWeight" class="control-select">
                 <option value="400">400 (Regular)</option>
+                <option value="500">500 (Medium)</option>
                 <option value="600">600 (SemiBold)</option>
                 <option value="700" selected>700 (Bold)</option>
                 <option value="800">800 (ExtraBold)</option>
@@ -559,7 +576,7 @@
             <div class="control-group">
               <label class="control-label">
                 <span>Letter Spacing</span>
-                <span id="typeSpacingVal" style="color: hsl(var(--primary)); font-weight: 600;">-0.5px</span>
+                <span id="typeSpacingVal" style="color: #2a5ba9; font-weight: 700;">-0.5px</span>
               </label>
               <input type="range" id="typeSpacing" class="control-input" min="-2" max="10" step="0.5" value="-0.5">
             </div>
@@ -567,166 +584,163 @@
             <div class="control-group">
               <label class="control-label">
                 <span>Line Height</span>
-                <span id="typeHeightVal" style="color: hsl(var(--primary)); font-weight: 600;">1.15</span>
+                <span id="typeHeightVal" style="color: #2a5ba9; font-weight: 700;">1.2</span>
               </label>
-              <input type="range" id="typeHeight" class="control-input" min="0.9" max="2.0" step="0.05" value="1.15">
+              <input type="range" id="typeHeight" class="control-input" min="0.9" max="2.0" step="0.05" value="1.2">
             </div>
           </div>
 
           <!-- Live Output Stage -->
           <div class="playground-output-stage">
-            <div id="playgroundText" class="playground-editable-text" contenteditable="true" spellcheck="false">
-              Intelligent Clean Energy Ecosystems
+            <div id="playgroundText" class="playground-editable-text" contenteditable="true" spellcheck="false" style="font-family: 'Lexend', sans-serif; font-size: 48px; font-weight: 700;">
+              Future-Ready Digital Ecosystems
             </div>
           </div>
 
           <!-- Generated CSS Output -->
           <div class="generated-css-code">
-            <code id="generatedCss">font-family: 'Outfit', sans-serif; font-size: 52px; font-weight: 700; line-height: 1.15; letter-spacing: -0.5px;</code>
+            <code id="generatedCss">font-family: 'Lexend', sans-serif; font-size: 48px; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px;</code>
             <button class="btn btn-secondary btn-sm" data-copy-target="#generatedCss">
               Copy CSS
             </button>
           </div>
         </div>
+      </section>
 
-        <!-- shadcn Type Scale Table -->
-        <h3 class="card-title" style="margin-top: 2.5rem; margin-bottom: 0.75rem;">Modular Type Scale</h3>
-        <div class="card" style="overflow-x: auto;">
-          <table class="type-scale-table">
-            <thead>
-              <tr>
-                <th>Role</th>
-                <th>Size / Line Height</th>
-                <th>Weight</th>
-                <th>Tracking</th>
-                <th>Preview</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Display XL</strong></td>
-                <td>64px / 1.1</td>
-                <td>800 (Bold)</td>
-                <td>-0.03em</td>
-                <td style="font-family: 'Outfit'; font-size: 1.4rem; font-weight: 800;">Solar Matrix</td>
-              </tr>
-              <tr>
-                <td><strong>Heading 1 (H1)</strong></td>
-                <td>36px / 1.2</td>
-                <td>700 (Bold)</td>
-                <td>-0.02em</td>
-                <td style="font-family: 'Outfit'; font-size: 1.15rem; font-weight: 700;">Intelligent Power</td>
-              </tr>
-              <tr>
-                <td><strong>Body Regular</strong></td>
-                <td>16px / 1.5</td>
-                <td>400 (Regular)</td>
-                <td>0em</td>
-                <td style="font-family: 'Plus Jakarta Sans'; font-size: 0.9rem;">Clean energy generation metrics</td>
-              </tr>
-              <tr>
-                <td><strong>Code / Mono</strong></td>
-                <td>14px / 1.4</td>
-                <td>600 (SemiBold)</td>
-                <td>0.05em</td>
-                <td style="font-family: 'JetBrains Mono'; font-size: 0.8rem; color: var(--solis-plasma);">SOLIS_GRID_OK // 99.98%</td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- ==================================================================
+           05. VISUAL ASSETS & ISOMETRIC PATTERNS
+           ================================================================== -->
+      <section id="patterns" class="brand-section">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="badge badge-outline">05 / Patterns & Assets</span>
+          </div>
+          <h2 class="section-title">Isometric Quantum Lattice Pattern</h2>
+          <p class="section-desc">
+            Isometric cube and blockchain lattice derived from quantum bits. Must always remain low-contrast (3–8% opacity) when applied as a background texture.
+          </p>
+        </div>
+
+        <div class="pattern-showcase" style="margin-bottom: 2rem;">
+          <div style="background: rgba(255,255,255,0.9); backdrop-filter: blur(8px); padding: 1rem 2rem; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center;">
+            <div style="font-family: var(--font-primary); font-weight: 700; color: #2a5ba9;">Low-Contrast Quantum Bit Lattice</div>
+            <div style="font-size: 0.75rem; color: hsl(var(--muted-foreground));">Applied across corporate collateral, website heroes, and event backdrops.</div>
+          </div>
+        </div>
+
+        <h3 class="card-title" style="margin-bottom: 0.75rem;">Imagery & Art Direction</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+          <div class="card" style="padding: 1.25rem;">
+            <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">AI Hardware & Silicon</div>
+            <p class="card-description">Precision macro shots of quantum chips, optical wafers, and clean-room environments.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem;">
+            <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">Server Infrastructure</div>
+            <p class="card-description">High-density data centers, optical fiber routing, and resilient rack architecture.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem;">
+            <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">Modern Workspaces</div>
+            <p class="card-description">Collaborative engineering teams, Hyderabad tech campus, and agile software sprints.</p>
+          </div>
         </div>
       </section>
 
       <!-- ==================================================================
-           05. REAL-WORLD APPLICATIONS & MOCKUPS
+           06. REAL-WORLD APPLICATIONS & MERCHANDISE
            ================================================================== -->
-      <section id="mockups" class="brand-section">
+      <section id="applications" class="brand-section">
         <div class="section-header">
           <div class="section-tag">
-            <span class="badge badge-outline">05 / Applications</span>
+            <span class="badge badge-outline">06 / Applications</span>
           </div>
-          <h2 class="section-title">Real-World Mockups</h2>
+          <h2 class="section-title">Brand Applications & Merchandise</h2>
           <p class="section-desc">
-            Explore how the SOLIS Dynamics visual identity translates across executive stationery and mobile telemetry dashboards.
+            Visual implementation across corporate signage, executive stationery, eco merchandise, and digital social kits.
           </p>
         </div>
 
-        <div class="rules-grid">
-          <!-- Mockup 1: Executive ID Card -->
-          <div class="mockup-item">
-            <div class="mockup-screen">
-              <div class="biz-card">
+        <div class="mockup-grid">
+          
+          <!-- 1. Executive NFC Business Card -->
+          <div class="mockup-card">
+            <div class="mockup-stage">
+              <div class="quantira-nfc-card">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <svg viewBox="0 0 100 100" width="26" height="26">
-                    <circle cx="50" cy="50" r="44" stroke="#FF6B00" stroke-width="6" stroke-dasharray="190 50" stroke-linecap="round"/>
-                    <circle cx="50" cy="50" r="14" fill="#FFA800"/>
+                  <svg viewBox="0 0 100 100" width="28" height="28">
+                    <circle cx="45" cy="45" r="32" stroke="#6CBAE7" stroke-width="6" fill="none"/>
+                    <line x1="22" y1="68" x2="68" y2="22" stroke="#6CBAE7" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M 54 54 L 75 75 L 85 75" stroke="#6CBAE7" stroke-width="5" stroke-linecap="round"/>
                   </svg>
-                  <div class="biz-card-chip"></div>
+                  <div style="font-family: var(--font-mono); font-size: 0.55rem; color: #6cbae7;">NFC ENABLED</div>
                 </div>
                 <div>
-                  <div class="biz-card-name">ELENA VANCE, PH.D.</div>
-                  <div class="biz-card-role">VP of Quantum Energy</div>
+                  <div style="font-family: var(--font-primary); font-size: 0.9rem; font-weight: 700; color: #ffffff;">VIKRAM REDDY</div>
+                  <div style="font-size: 0.6rem; color: #6cbae7; letter-spacing: 0.05em;">CHIEF TECHNOLOGY OFFICER</div>
                 </div>
-                <div style="display: flex; justify-content: space-between; font-size: 0.6rem; color: var(--text-muted); font-family: var(--font-mono);">
-                  <span>ID: SOLIS-9082</span>
-                  <span>SAN FRANCISCO</span>
+                <div style="display: flex; justify-content: space-between; font-size: 0.55rem; color: #94a3b8; font-family: var(--font-mono);">
+                  <span>QUANTIRA TECHNOLOGIES</span>
+                  <span>HYDERABAD, INDIA</span>
                 </div>
               </div>
             </div>
             <div class="card-header" style="padding: 1rem;">
               <h4 style="font-size: 0.95rem; font-weight: 600;">Executive NFC Card</h4>
-              <p class="card-description">Matte obsidian carbon finish with foil solar stamped debossing.</p>
+              <p class="card-description">Core Black matte polycarbonate with foil blue gradient debossing.</p>
             </div>
           </div>
 
-          <!-- Mockup 2: Mobile Telemetry App -->
-          <div class="mockup-item">
-            <div class="mockup-screen">
-              <div class="mobile-phone-frame">
-                <div class="mobile-notch"></div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
-                  <span style="font-size: 0.6rem; font-weight: 700; color: #fff;">SOLIS CONNECT</span>
-                  <span style="font-size: 0.55rem; color: var(--solis-cyan); font-family: var(--font-mono);">ONLINE</span>
+          <!-- 2. Eco Merchandise (Tote Bag & Tech Mug) -->
+          <div class="mockup-card">
+            <div class="mockup-stage">
+              <div class="merch-preview">
+                <div class="tote-bag">
+                  <div class="tote-handle"></div>
+                  <svg viewBox="0 0 100 100" width="30" height="30">
+                    <defs><linearGradient id="toteG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6CBAE7"/><stop offset="100%" stop-color="#2A5BA9"/></linearGradient></defs>
+                    <circle cx="45" cy="45" r="32" stroke="url(#toteG)" stroke-width="7" fill="none"/>
+                    <line x1="22" y1="68" x2="68" y2="22" stroke="url(#toteG)" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M 54 54 L 75 75 L 85 75" stroke="url(#toteG)" stroke-width="6" stroke-linecap="round"/>
+                  </svg>
+                  <div style="font-family: 'Lexend'; font-size: 0.45rem; font-weight: 800; color: #020202; margin-top: 4px;">QUANTIRA</div>
                 </div>
-                <div class="mobile-widget">
-                  <div style="font-size: 0.5rem; color: #94a3b8; text-transform: uppercase;">Generation</div>
-                  <div class="mobile-widget-val">4.82 MWh</div>
+                <div style="width: 50px; height: 60px; background: #020202; border-radius: 4px; display: flex; align-items: center; justify-content: center; position: relative;">
+                  <div style="position: absolute; right: -10px; width: 14px; height: 30px; border: 3px solid #020202; border-radius: 0 10px 10px 0;"></div>
+                  <svg viewBox="0 0 100 100" width="22" height="22">
+                    <circle cx="45" cy="45" r="32" stroke="#6CBAE7" stroke-width="8" fill="none"/>
+                    <line x1="22" y1="68" x2="68" y2="22" stroke="#6CBAE7" stroke-width="7"/>
+                  </svg>
                 </div>
               </div>
             </div>
             <div class="card-header" style="padding: 1rem;">
-              <h4 style="font-size: 0.95rem; font-weight: 600;">Mobile App UI</h4>
-              <p class="card-description">Real-time high-contrast dashboard with live solar telemetry metrics.</p>
+              <h4 style="font-size: 0.95rem; font-weight: 600;">Merchandise Kit</h4>
+              <p class="card-description">Organic canvas tote bag and matte ceramic developer mug.</p>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- ==================================================================
-           06. SHADCN UI COMPONENT KIT
-           ================================================================== -->
-      <section id="components" class="brand-section">
-        <div class="section-header">
-          <div class="section-tag">
-            <span class="badge badge-outline">06 / Components</span>
+          <!-- 3. Social Media Template -->
+          <div class="mockup-card">
+            <div class="mockup-stage">
+              <div style="width: 170px; height: 170px; background: #ffffff; border-radius: 8px; border: 1px solid #e2e8f0; padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 20px rgba(0,0,0,0.4);">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span class="badge badge-gradient" style="font-size: 0.5rem; padding: 0.1rem 0.4rem;">Tech Insights</span>
+                  <span style="font-size: 0.5rem; color: #94a3b8; font-family: var(--font-mono);">01/05</span>
+                </div>
+                <div style="font-family: var(--font-primary); font-size: 0.7rem; font-weight: 700; line-height: 1.3; color: #020202;">
+                  Resilient IT Architectures in 2026
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 0.3rem;">
+                  <span style="font-size: 0.5rem; font-weight: 700; color: #2a5ba9; font-family: var(--font-primary);">QUANTIRA</span>
+                  <span style="font-size: 0.45rem; color: #94a3b8;">Swipe →</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-header" style="padding: 1rem;">
+              <h4 style="font-size: 0.95rem; font-weight: 600;">Social Carousel Templates</h4>
+              <p class="card-description">LinkedIn & Instagram carousels with clean 50-30-20 balance.</p>
+            </div>
           </div>
-          <h2 class="section-title">shadcn/ui Component Kit</h2>
-          <p class="section-desc">
-            Standardized UI components styled with authentic shadcn/ui design tokens.
-          </p>
-        </div>
 
-        <div class="card" style="padding: 1.5rem; margin-bottom: 1.25rem;">
-          <h3 class="card-title" style="margin-bottom: 1rem;">Buttons & Badges</h3>
-          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-            <button class="btn btn-primary">Primary Action</button>
-            <button class="btn btn-secondary">Secondary Action</button>
-            <button class="btn btn-outline">Outline</button>
-            <button class="btn btn-ghost">Ghost</button>
-            <span class="badge badge-default">Default Badge</span>
-            <span class="badge badge-secondary">Secondary</span>
-            <span class="badge badge-outline">Outline</span>
-            <span class="badge badge-solar">Brand Solar</span>
-          </div>
         </div>
       </section>
 
@@ -751,34 +765,34 @@
           <div class="logo-variants-grid">
             <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Master Color Lockup</div>
-                <div class="card-description" style="margin-bottom: 1rem;">Full RGB color logo</div>
+                <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Master Gradient Lockup</div>
+                <div class="card-description" style="margin-bottom: 1rem;">Blue gradient on white canvas</div>
               </div>
-              <button class="btn btn-primary btn-sm" data-download-svg="master_color">Download SVG</button>
+              <button class="btn btn-primary btn-sm" data-download-svg="master_gradient">Download SVG</button>
             </div>
 
             <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Dark Monochrome</div>
-                <div class="card-description" style="margin-bottom: 1rem;">Solid white vector</div>
+                <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Dark Background Format</div>
+                <div class="card-description" style="margin-bottom: 1rem;">White wordmark on Core Black</div>
               </div>
-              <button class="btn btn-outline btn-sm" data-download-svg="dark_mono">Download SVG</button>
+              <button class="btn btn-outline btn-sm" data-download-svg="dark_format">Download SVG</button>
             </div>
 
             <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Light Monochrome</div>
-                <div class="card-description" style="margin-bottom: 1rem;">Solid obsidian vector</div>
+                <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Outline Version</div>
+                <div class="card-description" style="margin-bottom: 1rem;">Clean stroke-only vector</div>
               </div>
-              <button class="btn btn-outline btn-sm" data-download-svg="light_mono">Download SVG</button>
+              <button class="btn btn-outline btn-sm" data-download-svg="outline_version">Download SVG</button>
             </div>
 
             <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Monogram Symbol</div>
-                <div class="card-description" style="margin-bottom: 1rem;">1:1 symbol icon</div>
+                <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Mono-Color Black</div>
+                <div class="card-description" style="margin-bottom: 1rem;">Solid black for print reproduction</div>
               </div>
-              <button class="btn btn-outline btn-sm" data-download-svg="monogram">Download SVG</button>
+              <button class="btn btn-outline btn-sm" data-download-svg="mono_black">Download SVG</button>
             </div>
           </div>
 
@@ -787,10 +801,10 @@
 
           <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
             <button id="exportJsonTokensBtn" class="btn btn-outline btn-sm">
-              <span>Export tokens.json</span>
+              <span>Export quantira-tokens.json</span>
             </button>
             <button id="exportCssTokensBtn" class="btn btn-outline btn-sm">
-              <span>Export tokens.css</span>
+              <span>Export quantira-tokens.css</span>
             </button>
             <button id="exportTailwindTokensBtn" class="btn btn-outline btn-sm">
               <span>Export tailwind.config.js</span>
@@ -801,7 +815,7 @@
 
       <!-- Footer -->
       <footer style="margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid hsl(var(--border)); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: hsl(var(--muted-foreground));">
-        <div>&copy; 2026 SOLIS Dynamics Inc. Built with shadcn/ui.</div>
+        <div>&copy; 2026 Quantira Technologies. All rights reserved. Brand Guidelines v1.0.</div>
         <div><a href="#hero" style="color: inherit; text-decoration: none;">Back to Top ↑</a></div>
       </footer>
 
