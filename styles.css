@@ -168,13 +168,56 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.45rem 0.65rem;
+  padding: 0.48rem 0.65rem;
   border-radius: calc(var(--radius) - 2px);
   color: #dbeafe;
   text-decoration: none;
   font-size: 0.825rem;
   font-weight: 500;
   transition: all 0.15s ease;
+  gap: 0.5rem;
+}
+
+.nav-link-content {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.material-symbols-outlined,
+.material-icons,
+.nav-icon {
+  font-family: 'Material Symbols Outlined', 'Material Icons', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.15rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  color: #93c5fd;
+  flex-shrink: 0;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.nav-link:hover .nav-icon {
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.nav-link.active .nav-icon {
+  color: #6cbae7;
 }
 
 .nav-link:hover {
@@ -193,6 +236,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   color: rgba(255, 255, 255, 0.6);
+  flex-shrink: 0;
 }
 
 .sidebar-footer {
