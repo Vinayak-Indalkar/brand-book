@@ -3,27 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOLIS Dynamics — Brand Identity & Design System</title>
+  <title>SOLIS Dynamics — Brand Guidelines (shadcn/ui)</title>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Main Stylesheet -->
+  <!-- Main Stylesheet (shadcn/ui theme) -->
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090A0F'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23FF6B00' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23FFA800'/%3E%3Cellipse cx='32' cy='32' rx='20' ry='6' fill='none' stroke='%2300F0FF' stroke-width='2' transform='rotate(-30 32 32)'/%3E%3C/svg%3E">
 </head>
 <body class="light-theme">
 
-  <!-- Ambient Glow Elements -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-
   <div class="app-container">
     
     <!-- ====================================================================
-         SIDEBAR NAVIGATION
+         SHADCN SIDEBAR
          ==================================================================== -->
     <aside class="sidebar">
       <div class="sidebar-header">
@@ -36,19 +32,21 @@
           </svg>
           <div class="brand-title-wrap">
             <span class="brand-name">SOLIS</span>
-            <span class="brand-version">Guidelines v1.0</span>
+            <span class="brand-version">shadcn/ui v1.0</span>
           </div>
         </a>
+        <span class="badge badge-secondary" style="font-size: 0.65rem;">Beta</span>
       </div>
 
-      <!-- Quick Search -->
+      <!-- Quick Search with kbd -->
       <div class="sidebar-search">
         <div class="search-input-wrapper">
           <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input type="text" id="sidebarSearch" class="search-input" placeholder="Search guidelines...">
+          <input type="text" id="sidebarSearch" class="search-input" placeholder="Search doc...">
+          <kbd class="search-kbd">⌘K</kbd>
         </div>
       </div>
 
@@ -95,14 +93,14 @@
         </div>
 
         <div class="nav-group">
-          <div class="nav-group-title">Applications & Export</div>
+          <div class="nav-group-title">Components & Export</div>
           <a href="#mockups" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
             <span>Real-World Mockups</span>
           </a>
           <a href="#components" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-            <span>UI Component Kit</span>
+            <span>shadcn/ui Kit</span>
           </a>
           <a href="#downloads" class="nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -111,14 +109,14 @@
         </div>
       </nav>
 
-      <!-- Sidebar Quick Actions -->
+      <!-- Sidebar Actions -->
       <div class="sidebar-footer">
-        <button id="printPdfBtn" class="btn-sidebar">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        <button id="printPdfBtn" class="btn btn-outline btn-sm" style="width: 100%;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
           <span>Print / Export PDF</span>
         </button>
-        <button id="downloadAllAssetsBtn" class="btn-sidebar btn-sidebar-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <button id="downloadAllAssetsBtn" class="btn btn-primary btn-sm" style="width: 100%;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           <span>Download All SVGs</span>
         </button>
       </div>
@@ -129,19 +127,19 @@
          ==================================================================== -->
     <main class="main-content">
       
-      <!-- Top Utility Bar -->
+      <!-- Top Utility Bar (Breadcrumbs & Actions) -->
       <div class="top-bar">
         <div class="breadcrumb">
-          <span>Brand Portal</span>
-          <span>/</span>
-          <span>SOLIS Dynamics</span>
-          <span>/</span>
-          <span style="color: var(--solis-plasma);">Official Guidelines</span>
+          <a href="#">Brand Portal</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="#">SOLIS Dynamics</a>
+          <span class="breadcrumb-separator">/</span>
+          <span style="color: hsl(var(--foreground)); font-weight: 500;">Guidelines</span>
         </div>
 
         <div class="top-actions">
-          <button id="themeToggleBtn" class="theme-toggle-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <button id="themeToggleBtn" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             <span>Dark Mode</span>
           </button>
         </div>
@@ -150,13 +148,12 @@
       <!-- Hero Banner -->
       <section id="hero" class="hero-banner">
         <div class="hero-content">
-          <div class="hero-tag">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 6 12 12 16 14"></polygon></svg>
-            <span>Design System & Brand Identity 2026</span>
+          <div style="margin-bottom: 0.75rem;">
+            <span class="badge badge-solar">Design System 2026</span>
           </div>
           <h1 class="hero-title">SOLIS <span class="highlight">DYNAMICS</span></h1>
           <p class="hero-tagline">
-            Powering Tomorrow's Horizons with intelligent clean energy, adaptive hardware architectures, and radiant design precision.
+            Powering Tomorrow's Horizons with intelligent clean energy, adaptive hardware architectures, and radiant shadcn/ui design precision.
           </p>
 
           <div class="hero-stats">
@@ -166,11 +163,11 @@
             </div>
             <div class="stat-item">
               <span class="stat-val">100%</span>
-              <span class="stat-lbl">Vector Scalability</span>
+              <span class="stat-lbl">Vector System</span>
             </div>
             <div class="stat-item">
               <span class="stat-val">WCAG AAA</span>
-              <span class="stat-lbl">Accessibility Grade</span>
+              <span class="stat-lbl">Accessibility</span>
             </div>
             <div class="stat-item">
               <span class="stat-val">8pt</span>
@@ -185,7 +182,9 @@
            ================================================================== -->
       <section id="strategy" class="brand-section">
         <div class="section-header">
-          <span class="section-num">01 / Strategy</span>
+          <div class="section-tag">
+            <span class="badge badge-outline">01 / Strategy</span>
+          </div>
           <h2 class="section-title">Brand Core & Philosophy</h2>
           <p class="section-desc">
             SOLIS Dynamics exists at the intersection of radiant solar physics and artificial intelligence. Our brand identity expresses unrelenting technological ambition grounded in ecological stewardship.
@@ -197,50 +196,58 @@
         </div>
 
         <div class="pillars-grid">
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <div class="card">
+            <div class="card-header">
+              <div class="pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <h3 class="card-title">Luminous Precision</h3>
+              <p class="card-description">Uncompromising engineering rigor, mathematically flawless systems, and laser-sharp clarity in every interface.</p>
             </div>
-            <h3 class="pillar-title">Luminous Precision</h3>
-            <p class="pillar-desc">Uncompromising engineering rigor, mathematically flawless systems, and laser-sharp clarity in every interface.</p>
           </div>
 
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2a10 10 0 0 0-7.55 16.57L12 22l7.55-3.43A10 10 0 0 0 12 2z"></path><path d="M12 6v6l4 2"></path></svg>
+          <div class="card">
+            <div class="card-header">
+              <div class="pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2a10 10 0 0 0-7.55 16.57L12 22l7.55-3.43A10 10 0 0 0 12 2z"></path><path d="M12 6v6l4 2"></path></svg>
+              </div>
+              <h3 class="card-title">Adaptive Harmony</h3>
+              <p class="card-description">Eco-symbiotic technology that self-calibrates in real-time to preserve our biosphere and empower human lifestyles.</p>
             </div>
-            <h3 class="pillar-title">Adaptive Harmony</h3>
-            <p class="pillar-desc">Eco-symbiotic technology that self-calibrates in real-time to preserve our biosphere and empower human lifestyles.</p>
           </div>
 
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <div class="card">
+            <div class="card-header">
+              <div class="pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <h3 class="card-title">Unbounded Vision</h3>
+              <p class="card-description">Fearless exploration that anticipates the energy and spatial demands of the next century, today.</p>
             </div>
-            <h3 class="pillar-title">Unbounded Vision</h3>
-            <p class="pillar-desc">Fearless exploration that anticipates the energy and spatial demands of the next century, today.</p>
           </div>
 
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          <div class="card">
+            <div class="card-header">
+              <div class="pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h3 class="card-title">Transparent Trust</h3>
+              <p class="card-description">Open-source telemetry, verifiable carbon offsets, and uncompromising integrity in data and operations.</p>
             </div>
-            <h3 class="pillar-title">Transparent Trust</h3>
-            <p class="pillar-desc">Open-source telemetry, verifiable carbon offsets, and uncompromising integrity in data and operations.</p>
           </div>
         </div>
 
         <!-- Tone of Voice Section -->
-        <div id="voice" class="voice-matrix">
-          <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.5rem;">Tone of Voice Matrix</h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.75rem;">
+        <div id="voice" class="card" style="padding: 1.5rem;">
+          <h3 class="card-title" style="margin-bottom: 0.35rem;">Tone of Voice Matrix</h3>
+          <p class="card-description" style="margin-bottom: 1.5rem;">
             Our verbal voice is authoritative yet inspiring, technical yet profoundly accessible.
           </p>
 
           <div class="voice-slider-item">
             <div class="voice-labels">
               <span>Technical & Precise</span>
-              <span style="color: var(--solis-plasma);">80% / 20%</span>
+              <span style="color: hsl(var(--primary));">80% / 20%</span>
               <span>Jargon-Free & Accessible</span>
             </div>
             <div class="voice-track">
@@ -251,7 +258,7 @@
           <div class="voice-slider-item">
             <div class="voice-labels">
               <span>Visionary & Bold</span>
-              <span style="color: var(--solis-plasma);">85% / 15%</span>
+              <span style="color: hsl(var(--primary));">85% / 15%</span>
               <span>Cautious & Conservative</span>
             </div>
             <div class="voice-track">
@@ -262,7 +269,7 @@
           <div class="voice-slider-item">
             <div class="voice-labels">
               <span>Warm & Human</span>
-              <span style="color: var(--solis-plasma);">70% / 30%</span>
+              <span style="color: hsl(var(--primary));">70% / 30%</span>
               <span>Cold & Detached</span>
             </div>
             <div class="voice-track">
@@ -277,7 +284,9 @@
            ================================================================== -->
       <section id="logo" class="brand-section">
         <div class="section-header">
-          <span class="section-num">02 / Logo System</span>
+          <div class="section-tag">
+            <span class="badge badge-outline">02 / Logo System</span>
+          </div>
           <h2 class="section-title">Master Logo & Architecture</h2>
           <p class="section-desc">
             The SOLIS Dynamics mark combines the Helical Solar Monogram with a high-contrast geometric wordmark. Use the interactive controls below to inspect construction grids and background adaptability.
@@ -289,17 +298,17 @@
           <div id="logoGridOverlay" class="grid-overlay"></div>
           
           <div class="stage-controls">
-            <button id="toggleGridBtn" class="btn-ctrl">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+            <button id="toggleGridBtn" class="btn btn-outline btn-sm">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="3" x2="9" y2="21"></line></svg>
               <span>Construction Grid</span>
             </button>
-            <button id="toggleStageBgBtn" class="btn-ctrl">
-              <span>Light Background</span>
+            <button id="toggleStageBgBtn" class="btn btn-outline btn-sm">
+              <span>Dark Background</span>
             </button>
           </div>
 
           <!-- Master SVG Graphic -->
-          <svg viewBox="0 0 480 120" style="max-width: 440px; width: 100%; height: auto;">
+          <svg viewBox="0 0 480 120" style="max-width: 420px; width: 100%; height: auto;">
             <defs>
               <linearGradient id="mainSolisGlow" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#FF6B00"/>
@@ -320,9 +329,9 @@
 
         <!-- Logo Variations Grid -->
         <div class="logo-variants-grid">
-          <div class="logo-card">
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; align-items: center;">
             <div class="logo-preview-box dark">
-              <svg viewBox="0 0 120 120" width="80" height="80">
+              <svg viewBox="0 0 120 120" width="70" height="70">
                 <defs>
                   <linearGradient id="cardMonoGlow" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#FF6B00"/><stop offset="100%" stop-color="#00F0FF"/>
@@ -334,13 +343,13 @@
                 <ellipse cx="60" cy="60" rx="38" ry="12" fill="none" stroke="#00F0FF" stroke-width="3" transform="rotate(-30 60 60)"/>
               </svg>
             </div>
-            <div class="logo-card-title">Helical Monogram</div>
-            <button class="btn-dl-logo" data-download-svg="monogram">Download SVG</button>
+            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Helical Monogram</div>
+            <button class="btn btn-outline btn-sm" data-download-svg="monogram">Download SVG</button>
           </div>
 
-          <div class="logo-card">
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; align-items: center;">
             <div class="logo-preview-box dark">
-              <svg viewBox="0 0 480 120" width="180" height="45">
+              <svg viewBox="0 0 480 120" width="160" height="40">
                 <g transform="translate(20, 15)">
                   <circle cx="45" cy="45" r="42" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-dasharray="180 50" stroke-linecap="round"/>
                   <circle cx="45" cy="45" r="14" fill="#FFFFFF"/>
@@ -349,13 +358,13 @@
                 <text x="132" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="9" opacity="0.8">DYNAMICS</text>
               </svg>
             </div>
-            <div class="logo-card-title">Dark Mono Lockup</div>
-            <button class="btn-dl-logo" data-download-svg="dark_mono">Download SVG</button>
+            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Dark Mono Lockup</div>
+            <button class="btn btn-outline btn-sm" data-download-svg="dark_mono">Download SVG</button>
           </div>
 
-          <div class="logo-card">
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; align-items: center;">
             <div class="logo-preview-box light">
-              <svg viewBox="0 0 480 120" width="180" height="45">
+              <svg viewBox="0 0 480 120" width="160" height="40">
                 <g transform="translate(20, 15)">
                   <circle cx="45" cy="45" r="42" fill="none" stroke="#090A0F" stroke-width="6" stroke-dasharray="180 50" stroke-linecap="round"/>
                   <circle cx="45" cy="45" r="14" fill="#090A0F"/>
@@ -364,99 +373,73 @@
                 <text x="132" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#090A0F" letter-spacing="9" opacity="0.8">DYNAMICS</text>
               </svg>
             </div>
-            <div class="logo-card-title">Light Mono Lockup</div>
-            <button class="btn-dl-logo" data-download-svg="light_mono">Download SVG</button>
+            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Light Mono Lockup</div>
+            <button class="btn btn-outline btn-sm" data-download-svg="light_mono">Download SVG</button>
           </div>
 
-          <div class="logo-card">
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; align-items: center;">
             <div class="logo-preview-box dark">
-              <svg viewBox="0 0 64 64" width="56" height="56">
+              <svg viewBox="0 0 64 64" width="50" height="50">
                 <rect width="64" height="64" rx="14" fill="#111420" stroke="rgba(255,255,255,0.1)"/>
                 <circle cx="32" cy="32" r="20" fill="none" stroke="#FF6B00" stroke-width="3" stroke-linecap="round"/>
                 <circle cx="32" cy="32" r="7" fill="#FFA800"/>
                 <ellipse cx="32" cy="32" rx="18" ry="5" fill="none" stroke="#00F0FF" stroke-width="2" transform="rotate(-30 32 32)"/>
               </svg>
             </div>
-            <div class="logo-card-title">App Icon / Favicon</div>
-            <button class="btn-dl-logo" data-download-svg="favicon">Download SVG</button>
+            <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">App Icon / Favicon</div>
+            <button class="btn btn-outline btn-sm" data-download-svg="favicon">Download SVG</button>
           </div>
         </div>
 
         <!-- Dos and Don'ts -->
-        <div id="rules" class="section-header" style="margin-top: 3.5rem;">
-          <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.5rem;">Logo Misuse & Rules</h3>
+        <div id="rules" class="section-header" style="margin-top: 3rem;">
+          <h3 class="section-title" style="font-size: 1.4rem;">Logo Misuse & Rules</h3>
           <p class="section-desc">To maintain brand consistency and authority, strictly follow these usage guidelines.</p>
         </div>
 
         <div class="rules-grid">
-          <div class="rule-card">
+          <div class="card" style="overflow: hidden;">
             <div class="rule-visual">
-              <span class="rule-badge do">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Correct
-              </span>
-              <svg viewBox="0 0 240 60" width="160" height="40">
+              <span class="badge badge-success rule-badge">✓ Correct</span>
+              <svg viewBox="0 0 240 60" width="150" height="38">
                 <circle cx="25" cy="30" r="18" fill="none" stroke="#FF6B00" stroke-width="3"/>
                 <circle cx="25" cy="30" r="7" fill="#FFA800"/>
-                <text x="55" y="38" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">SOLIS</text>
+                <text x="55" y="38" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="currentColor">SOLIS</text>
               </svg>
             </div>
-            <div class="rule-info">
-              <div class="rule-title">Maintain Aspect Ratio & Clear Space</div>
-              <p class="rule-desc">Always preserve official proportions with minimum clear space of 1X height around the mark.</p>
+            <div class="card-header" style="padding: 1rem;">
+              <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Maintain Aspect Ratio</div>
+              <p class="card-description">Always preserve official proportions with minimum clear space around the mark.</p>
             </div>
           </div>
 
-          <div class="rule-card">
+          <div class="card" style="overflow: hidden;">
             <div class="rule-visual">
-              <span class="rule-badge dont">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                Don't
-              </span>
-              <svg viewBox="0 0 240 60" width="160" height="40" style="transform: scaleX(1.4);">
+              <span class="badge badge-secondary rule-badge" style="color: #ef4444; border-color: rgba(239,68,68,0.3);">✕ Don't</span>
+              <svg viewBox="0 0 240 60" width="150" height="38" style="transform: scaleX(1.4);">
                 <circle cx="25" cy="30" r="18" fill="none" stroke="#FF6B00" stroke-width="3"/>
                 <circle cx="25" cy="30" r="7" fill="#FFA800"/>
-                <text x="55" y="38" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">SOLIS</text>
+                <text x="55" y="38" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="currentColor">SOLIS</text>
               </svg>
             </div>
-            <div class="rule-info">
-              <div class="rule-title">Do Not Stretch or Distort</div>
-              <p class="rule-desc">Never scale horizontally or vertically disproportionately or alter typography kerning.</p>
+            <div class="card-header" style="padding: 1rem;">
+              <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Do Not Stretch</div>
+              <p class="card-description">Never scale horizontally or vertically disproportionately.</p>
             </div>
           </div>
 
-          <div class="rule-card">
+          <div class="card" style="overflow: hidden;">
             <div class="rule-visual">
-              <span class="rule-badge dont">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                Don't
-              </span>
-              <svg viewBox="0 0 240 60" width="160" height="40" style="transform: rotate(-15deg);">
+              <span class="badge badge-secondary rule-badge" style="color: #ef4444; border-color: rgba(239,68,68,0.3);">✕ Don't</span>
+              <svg viewBox="0 0 240 60" width="150" height="38" style="transform: rotate(-15deg);">
                 <circle cx="25" cy="30" r="18" fill="none" stroke="#FF6B00" stroke-width="3"/>
                 <circle cx="25" cy="30" r="7" fill="#FFA800"/>
-                <text x="55" y="38" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">SOLIS</text>
+                <text x="55" y="38" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="currentColor">SOLIS</text>
               </svg>
             </div>
-            <div class="rule-info">
-              <div class="rule-title">Do Not Rotate or Tilt</div>
-              <p class="rule-desc">The logo lockup must always be presented horizontally in standard orientation.</p>
-            </div>
-          </div>
-
-          <div class="rule-card">
-            <div class="rule-visual" style="background: linear-gradient(45deg, #ff0077, #7700ff);">
-              <span class="rule-badge dont">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                Don't
-              </span>
-              <svg viewBox="0 0 240 60" width="160" height="40">
-                <circle cx="25" cy="30" r="18" fill="none" stroke="#00ff66" stroke-width="3"/>
-                <text x="55" y="38" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="#ffff00">SOLIS</text>
-              </svg>
-            </div>
-            <div class="rule-info">
-              <div class="rule-title">Do Not Use Unapproved Colors</div>
-              <p class="rule-desc">Never apply unauthorized colors or place the mark on low-contrast backgrounds.</p>
+            <div class="card-header" style="padding: 1rem;">
+              <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Do Not Rotate</div>
+              <p class="card-description">The logo lockup must always be presented horizontally in standard orientation.</p>
             </div>
           </div>
         </div>
@@ -467,15 +450,16 @@
            ================================================================== -->
       <section id="colors" class="brand-section">
         <div class="section-header">
-          <span class="section-num">03 / Color</span>
+          <div class="section-tag">
+            <span class="badge badge-outline">03 / Color</span>
+          </div>
           <h2 class="section-title">Color Architecture & Tokens</h2>
           <p class="section-desc">
-            Our chromatic palette radiates high-energy solar heat contrasted against deep cosmic obsidian. Click any color value to instantly copy it to your clipboard.
+            Our chromatic palette radiates high-energy solar heat contrasted against clean neutral surfaces. Click any color row to copy.
           </p>
         </div>
 
-        <!-- Primary Colors -->
-        <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 1rem;">Primary Core Palette</h3>
+        <h3 class="card-title" style="margin-bottom: 0.875rem;">Primary Core Palette</h3>
         <div class="color-palette-grid">
           
           <div class="color-card" data-copy="#FF6B00">
@@ -484,13 +468,10 @@
             </div>
             <div class="color-details">
               <div class="color-name">Solar Plasma</div>
-              <div class="color-role">Primary Energy Accent</div>
-              <div class="color-values">
-                <div class="color-val-row" data-copy="#FF6B00"><span>HEX</span><span>#FF6B00</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="rgb(255, 107, 0)"><span>RGB</span><span>255, 107, 0</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="hsl(25, 100%, 50%)"><span>HSL</span><span>25°, 100%, 50%</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="var(--solis-plasma)"><span>CSS</span><span>--solis-plasma</span><span class="copy-hint">Copy</span></div>
-              </div>
+              <div class="color-role">Primary Accent</div>
+              <div class="color-val-row" data-copy="#FF6B00"><span>HEX</span><span>#FF6B00</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="rgb(255, 107, 0)"><span>RGB</span><span>255, 107, 0</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="hsl(25, 100%, 50%)"><span>HSL</span><span>25°, 100%, 50%</span><span class="copy-hint">Copy</span></div>
             </div>
           </div>
 
@@ -500,13 +481,10 @@
             </div>
             <div class="color-details">
               <div class="color-name">Photon Amber</div>
-              <div class="color-role">Secondary Warm Accent</div>
-              <div class="color-values">
-                <div class="color-val-row" data-copy="#FFA800"><span>HEX</span><span>#FFA800</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="rgb(255, 168, 0)"><span>RGB</span><span>255, 168, 0</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="hsl(39, 100%, 50%)"><span>HSL</span><span>39°, 100%, 50%</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="var(--solis-amber)"><span>CSS</span><span>--solis-amber</span><span class="copy-hint">Copy</span></div>
-              </div>
+              <div class="color-role">Secondary Warm</div>
+              <div class="color-val-row" data-copy="#FFA800"><span>HEX</span><span>#FFA800</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="rgb(255, 168, 0)"><span>RGB</span><span>255, 168, 0</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="hsl(39, 100%, 50%)"><span>HSL</span><span>39°, 100%, 50%</span><span class="copy-hint">Copy</span></div>
             </div>
           </div>
 
@@ -516,80 +494,23 @@
             </div>
             <div class="color-details">
               <div class="color-name">Hyper Cyan</div>
-              <div class="color-role">Luminescence & Telemetry</div>
-              <div class="color-values">
-                <div class="color-val-row" data-copy="#00F0FF"><span>HEX</span><span>#00F0FF</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="rgb(0, 240, 255)"><span>RGB</span><span>0, 240, 255</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="hsl(184, 100%, 50%)"><span>HSL</span><span>184°, 100%, 50%</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="var(--solis-cyan)"><span>CSS</span><span>--solis-cyan</span><span class="copy-hint">Copy</span></div>
-              </div>
+              <div class="color-role">Luminescence</div>
+              <div class="color-val-row" data-copy="#00F0FF"><span>HEX</span><span>#00F0FF</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="rgb(0, 240, 255)"><span>RGB</span><span>0, 240, 255</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="hsl(184, 100%, 50%)"><span>HSL</span><span>184°, 100%, 50%</span><span class="copy-hint">Copy</span></div>
             </div>
           </div>
 
           <div class="color-card" data-copy="#090A0F">
-            <div class="color-swatch-box" style="background: #090A0F; border: 1px solid rgba(255,255,255,0.1);">
-              <span class="wcag-badge">Base Canvas</span>
+            <div class="color-swatch-box" style="background: #090A0F; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <span class="wcag-badge">Base Dark</span>
             </div>
             <div class="color-details">
               <div class="color-name">Obsidian Void</div>
-              <div class="color-role">Primary Dark Ground</div>
-              <div class="color-values">
-                <div class="color-val-row" data-copy="#090A0F"><span>HEX</span><span>#090A0F</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="rgb(9, 10, 15)"><span>RGB</span><span>9, 10, 15</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="hsl(230, 25%, 5%)"><span>HSL</span><span>230°, 25%, 5%</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="var(--solis-obsidian)"><span>CSS</span><span>--solis-obsidian</span><span class="copy-hint">Copy</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="color-card" data-copy="#F8FAFC">
-            <div class="color-swatch-box" style="background: #F8FAFC;">
-              <span class="wcag-badge" style="color: #000;">Surface AAA</span>
-            </div>
-            <div class="color-details">
-              <div class="color-name">Lumen White</div>
-              <div class="color-role">Primary Text & Highlights</div>
-              <div class="color-values">
-                <div class="color-val-row" data-copy="#F8FAFC"><span>HEX</span><span>#F8FAFC</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="rgb(248, 250, 252)"><span>RGB</span><span>248, 250, 252</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="hsl(210, 40%, 98%)"><span>HSL</span><span>210°, 40%, 98%</span><span class="copy-hint">Copy</span></div>
-                <div class="color-val-row" data-copy="var(--solis-lumen)"><span>CSS</span><span>--solis-lumen</span><span class="copy-hint">Copy</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Signature Brand Gradients -->
-        <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 1rem; margin-top: 2.5rem;">Signature Brand Gradients</h3>
-        <div class="gradient-strip-grid">
-          
-          <div class="grad-card">
-            <div class="grad-preview" style="background: linear-gradient(135deg, #FF6B00 0%, #FFA800 50%, #00F0FF 100%);"></div>
-            <div class="grad-info">
-              <div class="grad-title">Solar Flare Gradient</div>
-              <div class="grad-code" data-copy="linear-gradient(135deg, #FF6B00 0%, #FFA800 50%, #00F0FF 100%)">
-                linear-gradient(135deg, #FF6B00 0%, #FFA800 50%, #00F0FF 100%)
-              </div>
-            </div>
-          </div>
-
-          <div class="grad-card">
-            <div class="grad-preview" style="background: linear-gradient(135deg, #FF6B00 0%, #FFA800 100%);"></div>
-            <div class="grad-info">
-              <div class="grad-title">Pure Plasma Flow</div>
-              <div class="grad-code" data-copy="linear-gradient(135deg, #FF6B00 0%, #FFA800 100%)">
-                linear-gradient(135deg, #FF6B00 0%, #FFA800 100%)
-              </div>
-            </div>
-          </div>
-
-          <div class="grad-card">
-            <div class="grad-preview" style="background: linear-gradient(135deg, #00F0FF 0%, #0088FF 100%);"></div>
-            <div class="grad-info">
-              <div class="grad-title">Quantum Flux Flow</div>
-              <div class="grad-code" data-copy="linear-gradient(135deg, #00F0FF 0%, #0088FF 100%)">
-                linear-gradient(135deg, #00F0FF 0%, #0088FF 100%)
-              </div>
+              <div class="color-role">Deep Neutral</div>
+              <div class="color-val-row" data-copy="#090A0F"><span>HEX</span><span>#090A0F</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="rgb(9, 10, 15)"><span>RGB</span><span>9, 10, 15</span><span class="copy-hint">Copy</span></div>
+              <div class="color-val-row" data-copy="hsl(230, 25%, 5%)"><span>HSL</span><span>230°, 25%, 5%</span><span class="copy-hint">Copy</span></div>
             </div>
           </div>
         </div>
@@ -600,51 +521,19 @@
            ================================================================== -->
       <section id="typography" class="brand-section">
         <div class="section-header">
-          <span class="section-num">04 / Typography</span>
-          <h2 class="section-title">Typography System & Live Playground</h2>
+          <div class="section-tag">
+            <span class="badge badge-outline">04 / Typography</span>
+          </div>
+          <h2 class="section-title">Typography & Live Sandbox</h2>
           <p class="section-desc">
-            Our type family blends futuristic geometric geometry (Outfit & Space Grotesk) with razor-sharp legible UI sans-serif (Plus Jakarta Sans) and high-precision monospace (JetBrains Mono).
+            Our type family blends futuristic geometric geometry (Outfit) with razor-sharp legible UI sans-serif (Plus Jakarta Sans).
           </p>
-        </div>
-
-        <!-- Typeface 1: Outfit Display -->
-        <div class="type-family-card">
-          <div class="type-header">
-            <div>
-              <div class="type-name" style="font-family: 'Outfit', sans-serif;">Outfit</div>
-              <div class="type-meta">Primary Display & Hero Headlines — Geometric Humanist Sans</div>
-            </div>
-            <span class="badge-solar">Display Primary</span>
-          </div>
-          <div class="type-specimen" style="font-family: 'Outfit', sans-serif;">
-            POWERING INFINITE HORIZONS 2026
-          </div>
-          <div class="type-alphabet" style="font-family: 'Outfit', sans-serif;">
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ • abcdefghijklmnopqrstuvwxyz • 0123456789 • !@#$%^&*()
-          </div>
-        </div>
-
-        <!-- Typeface 2: Plus Jakarta Sans -->
-        <div class="type-family-card">
-          <div class="type-header">
-            <div>
-              <div class="type-name" style="font-family: 'Plus Jakarta Sans', sans-serif;">Plus Jakarta Sans</div>
-              <div class="type-meta">Body Copy, UI Labels, Microcopy & Editorial Content</div>
-            </div>
-            <span class="badge-cyan">UI & Body</span>
-          </div>
-          <div class="type-specimen" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; font-weight: 500;">
-            Next-generation distributed microgrid infrastructure designed for 99.999% fault tolerance and zero carbon emissions.
-          </div>
-          <div class="type-alphabet" style="font-family: 'Plus Jakarta Sans', sans-serif;">
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ • abcdefghijklmnopqrstuvwxyz • 0123456789 • &mdash; / \ ? !
-          </div>
         </div>
 
         <!-- Interactive Playground -->
         <div class="playground-box">
-          <h3 style="font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.5rem;">Interactive Type Playground</h3>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+          <h3 class="card-title" style="margin-bottom: 0.25rem;">Interactive Type Playground</h3>
+          <p class="card-description" style="margin-bottom: 1.25rem;">
             Test custom headlines, adjust sliders in real-time, and copy the generated CSS rules.
           </p>
 
@@ -662,9 +551,9 @@
             <div class="control-group">
               <label class="control-label">
                 <span>Font Size</span>
-                <span id="typeSizeVal" style="color: var(--solis-plasma);">56px</span>
+                <span id="typeSizeVal" style="color: hsl(var(--primary)); font-weight: 600;">52px</span>
               </label>
-              <input type="range" id="typeSize" class="control-input" min="16" max="96" value="56">
+              <input type="range" id="typeSize" class="control-input" min="16" max="96" value="52">
             </div>
 
             <div class="control-group">
@@ -674,14 +563,13 @@
                 <option value="600">600 (SemiBold)</option>
                 <option value="700" selected>700 (Bold)</option>
                 <option value="800">800 (ExtraBold)</option>
-                <option value="900">900 (Black)</option>
               </select>
             </div>
 
             <div class="control-group">
               <label class="control-label">
                 <span>Letter Spacing</span>
-                <span id="typeSpacingVal" style="color: var(--solis-plasma);">-0.5px</span>
+                <span id="typeSpacingVal" style="color: hsl(var(--primary)); font-weight: 600;">-0.5px</span>
               </label>
               <input type="range" id="typeSpacing" class="control-input" min="-2" max="10" step="0.5" value="-0.5">
             </div>
@@ -689,7 +577,7 @@
             <div class="control-group">
               <label class="control-label">
                 <span>Line Height</span>
-                <span id="typeHeightVal" style="color: var(--solis-plasma);">1.15</span>
+                <span id="typeHeightVal" style="color: hsl(var(--primary)); font-weight: 600;">1.15</span>
               </label>
               <input type="range" id="typeHeight" class="control-input" min="0.9" max="2.0" step="0.05" value="1.15">
             </div>
@@ -704,16 +592,16 @@
 
           <!-- Generated CSS Output -->
           <div class="generated-css-code">
-            <code id="generatedCss">font-family: 'Outfit', sans-serif; font-size: 56px; font-weight: 700; line-height: 1.15; letter-spacing: -0.5px;</code>
-            <button class="btn-ctrl" data-copy-target="#generatedCss" style="background: rgba(255,255,255,0.15);">
+            <code id="generatedCss">font-family: 'Outfit', sans-serif; font-size: 52px; font-weight: 700; line-height: 1.15; letter-spacing: -0.5px;</code>
+            <button class="btn btn-secondary btn-sm" data-copy-target="#generatedCss">
               Copy CSS
             </button>
           </div>
         </div>
 
-        <!-- Type Scale Table -->
-        <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-top: 3rem; margin-bottom: 1rem;">Modular Type Scale Table</h3>
-        <div style="overflow-x: auto;">
+        <!-- shadcn Type Scale Table -->
+        <h3 class="card-title" style="margin-top: 2.5rem; margin-bottom: 0.75rem;">Modular Type Scale</h3>
+        <div class="card" style="overflow-x: auto;">
           <table class="type-scale-table">
             <thead>
               <tr>
@@ -730,28 +618,14 @@
                 <td>64px / 1.1</td>
                 <td>800 (Bold)</td>
                 <td>-0.03em</td>
-                <td style="font-family: 'Outfit'; font-size: 1.75rem; font-weight: 800;">Solar Matrix</td>
+                <td style="font-family: 'Outfit'; font-size: 1.4rem; font-weight: 800;">Solar Matrix</td>
               </tr>
               <tr>
                 <td><strong>Heading 1 (H1)</strong></td>
                 <td>36px / 1.2</td>
                 <td>700 (Bold)</td>
                 <td>-0.02em</td>
-                <td style="font-family: 'Outfit'; font-size: 1.25rem; font-weight: 700;">Intelligent Power</td>
-              </tr>
-              <tr>
-                <td><strong>Heading 2 (H2)</strong></td>
-                <td>28px / 1.3</td>
-                <td>600 (SemiBold)</td>
-                <td>-0.01em</td>
-                <td style="font-family: 'Outfit'; font-size: 1.1rem; font-weight: 600;">Adaptive Micro-Grids</td>
-              </tr>
-              <tr>
-                <td><strong>Body Large</strong></td>
-                <td>18px / 1.6</td>
-                <td>400 (Regular)</td>
-                <td>0em</td>
-                <td style="font-family: 'Plus Jakarta Sans'; font-size: 1rem;">Decentralized storage nodes</td>
+                <td style="font-family: 'Outfit'; font-size: 1.15rem; font-weight: 700;">Intelligent Power</td>
               </tr>
               <tr>
                 <td><strong>Body Regular</strong></td>
@@ -765,7 +639,7 @@
                 <td>14px / 1.4</td>
                 <td>600 (SemiBold)</td>
                 <td>0.05em</td>
-                <td style="font-family: 'JetBrains Mono'; font-size: 0.85rem; color: var(--solis-cyan);">SOLIS_GRID_OK // 99.98%</td>
+                <td style="font-family: 'JetBrains Mono'; font-size: 0.8rem; color: var(--solis-plasma);">SOLIS_GRID_OK // 99.98%</td>
               </tr>
             </tbody>
           </table>
@@ -773,98 +647,26 @@
       </section>
 
       <!-- ==================================================================
-           05. SPATIAL GRID & DESIGN TOKENS
-           ================================================================== -->
-      <section id="grid" class="brand-section">
-        <div class="section-header">
-          <span class="section-num">05 / Spatial System</span>
-          <h2 class="section-title">8pt Spatial System & Layout</h2>
-          <p class="section-desc">
-            All margins, paddings, gap dimensions, and card bounding boxes align strictly with an 8-point geometric spatial scale for mathematical rhythm and responsive balance.
-          </p>
-        </div>
-
-        <div class="card-grid">
-          <div class="card">
-            <h3 style="font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 1.25rem;">Spacing Scale</h3>
-            <div class="spacing-bars-list">
-              <div class="spacing-bar-item">
-                <span class="spacing-label">4px (xs)</span>
-                <div class="spacing-visual" style="width: 20px;"></div>
-                <span class="spacing-val">--space-xs</span>
-              </div>
-              <div class="spacing-bar-item">
-                <span class="spacing-label">8px (sm)</span>
-                <div class="spacing-visual" style="width: 40px;"></div>
-                <span class="spacing-val">--space-sm</span>
-              </div>
-              <div class="spacing-bar-item">
-                <span class="spacing-label">16px (md)</span>
-                <div class="spacing-visual" style="width: 80px;"></div>
-                <span class="spacing-val">--space-md</span>
-              </div>
-              <div class="spacing-bar-item">
-                <span class="spacing-label">24px (lg)</span>
-                <div class="spacing-visual" style="width: 120px;"></div>
-                <span class="spacing-val">--space-lg</span>
-              </div>
-              <div class="spacing-bar-item">
-                <span class="spacing-label">32px (xl)</span>
-                <div class="spacing-visual" style="width: 160px;"></div>
-                <span class="spacing-val">--space-xl</span>
-              </div>
-              <div class="spacing-bar-item">
-                <span class="spacing-label">48px (2xl)</span>
-                <div class="spacing-visual" style="width: 210px;"></div>
-                <span class="spacing-val">--space-2xl</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 style="font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 1.25rem;">Corner Radii Tokens</h3>
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span>Radius SM (6px)</span>
-                <div style="width: 44px; height: 32px; background: rgba(255,107,0,0.2); border: 1px solid var(--solis-plasma); border-radius: 6px;"></div>
-              </div>
-              <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span>Radius MD (12px)</span>
-                <div style="width: 44px; height: 32px; background: rgba(255,107,0,0.2); border: 1px solid var(--solis-plasma); border-radius: 12px;"></div>
-              </div>
-              <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span>Radius LG (18px)</span>
-                <div style="width: 44px; height: 32px; background: rgba(255,107,0,0.2); border: 1px solid var(--solis-plasma); border-radius: 18px;"></div>
-              </div>
-              <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span>Radius Pill (9999px)</span>
-                <div style="width: 44px; height: 26px; background: rgba(255,107,0,0.2); border: 1px solid var(--solis-plasma); border-radius: 9999px;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==================================================================
-           06. REAL-WORLD APPLICATIONS & MOCKUPS
+           05. REAL-WORLD APPLICATIONS & MOCKUPS
            ================================================================== -->
       <section id="mockups" class="brand-section">
         <div class="section-header">
-          <span class="section-num">06 / Applications</span>
-          <h2 class="section-title">Real-World Mockups & Media</h2>
+          <div class="section-tag">
+            <span class="badge badge-outline">05 / Applications</span>
+          </div>
+          <h2 class="section-title">Real-World Mockups</h2>
           <p class="section-desc">
-            Explore how the SOLIS Dynamics visual identity translates across executive stationery, mobile telemetry dashboards, and digital user experiences.
+            Explore how the SOLIS Dynamics visual identity translates across executive stationery and mobile telemetry dashboards.
           </p>
         </div>
 
-        <div class="mockup-showcase-grid">
-          
-          <!-- Mockup 1: Executive Matte Black ID Card -->
+        <div class="rules-grid">
+          <!-- Mockup 1: Executive ID Card -->
           <div class="mockup-item">
             <div class="mockup-screen">
               <div class="biz-card">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <svg viewBox="0 0 100 100" width="30" height="30">
+                  <svg viewBox="0 0 100 100" width="26" height="26">
                     <circle cx="50" cy="50" r="44" stroke="#FF6B00" stroke-width="6" stroke-dasharray="190 50" stroke-linecap="round"/>
                     <circle cx="50" cy="50" r="14" fill="#FFA800"/>
                   </svg>
@@ -872,17 +674,17 @@
                 </div>
                 <div>
                   <div class="biz-card-name">ELENA VANCE, PH.D.</div>
-                  <div class="biz-card-role">VP of Quantum Energy Systems</div>
+                  <div class="biz-card-role">VP of Quantum Energy</div>
                 </div>
-                <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: var(--text-muted); font-family: var(--font-mono);">
-                  <span>ID: SOLIS-9082-ALPHA</span>
-                  <span>SAN FRANCISCO, CA</span>
+                <div style="display: flex; justify-content: space-between; font-size: 0.6rem; color: var(--text-muted); font-family: var(--font-mono);">
+                  <span>ID: SOLIS-9082</span>
+                  <span>SAN FRANCISCO</span>
                 </div>
               </div>
             </div>
-            <div style="padding: 1.25rem;">
-              <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">Executive Matte NFC Identity Card</h4>
-              <p style="font-size: 0.8rem; color: var(--text-secondary);">Matte obsidian carbon finish with foil solar stamped debossing.</p>
+            <div class="card-header" style="padding: 1rem;">
+              <h4 style="font-size: 0.95rem; font-weight: 600;">Executive NFC Card</h4>
+              <p class="card-description">Matte obsidian carbon finish with foil solar stamped debossing.</p>
             </div>
           </div>
 
@@ -891,144 +693,116 @@
             <div class="mockup-screen">
               <div class="mobile-phone-frame">
                 <div class="mobile-notch"></div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                  <span style="font-size: 0.65rem; font-weight: 700;">SOLIS CONNECT</span>
-                  <span style="font-size: 0.6rem; color: var(--solis-cyan); font-family: var(--font-mono);">ONLINE</span>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                  <span style="font-size: 0.6rem; font-weight: 700; color: #fff;">SOLIS CONNECT</span>
+                  <span style="font-size: 0.55rem; color: var(--solis-cyan); font-family: var(--font-mono);">ONLINE</span>
                 </div>
                 <div class="mobile-widget">
-                  <div style="font-size: 0.55rem; color: var(--text-muted); text-transform: uppercase;">Grid Generation</div>
+                  <div style="font-size: 0.5rem; color: #94a3b8; text-transform: uppercase;">Generation</div>
                   <div class="mobile-widget-val">4.82 MWh</div>
-                  <div style="font-size: 0.55rem; color: #10B981;">▲ +18.4% vs Avg</div>
-                </div>
-                <div style="background: rgba(0,240,255,0.08); border: 1px solid rgba(0,240,255,0.25); border-radius: 8px; padding: 0.5rem;">
-                  <div style="font-size: 0.55rem; color: var(--text-muted); text-transform: uppercase;">Storage Reserve</div>
-                  <div style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--solis-cyan);">98.6%</div>
                 </div>
               </div>
             </div>
-            <div style="padding: 1.25rem;">
-              <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">Mobile Telemetry & Grid App</h4>
-              <p style="font-size: 0.8rem; color: var(--text-secondary);">Real-time high-contrast dashboard with live solar telemetry metrics.</p>
-            </div>
-          </div>
-
-          <!-- Mockup 3: Smart Energy Terminal Screen -->
-          <div class="mockup-item">
-            <div class="mockup-screen">
-              <div style="width: 250px; background: #111420; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem;">
-                  <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--solis-plasma); box-shadow: 0 0 8px var(--solis-plasma);"></div>
-                  <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-primary);">GRID_NODE_04 // ACTIVE</span>
-                </div>
-                <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; margin-bottom: 0.8rem;">
-                  <div style="height: 100%; width: 85%; background: var(--grad-plasma);"></div>
-                </div>
-                <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: var(--text-secondary);">
-                  <span>Efficiency: 99.4%</span>
-                  <span style="color: var(--solis-cyan);">Zero Loss</span>
-                </div>
-              </div>
-            </div>
-            <div style="padding: 1.25rem;">
-              <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">Industrial Station Interface</h4>
-              <p style="font-size: 0.8rem; color: var(--text-secondary);">Designed for high-visibility tactile hardware displays in field operations.</p>
+            <div class="card-header" style="padding: 1rem;">
+              <h4 style="font-size: 0.95rem; font-weight: 600;">Mobile App UI</h4>
+              <p class="card-description">Real-time high-contrast dashboard with live solar telemetry metrics.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ==================================================================
-           07. UI COMPONENT KIT
+           06. SHADCN UI COMPONENT KIT
            ================================================================== -->
       <section id="components" class="brand-section">
         <div class="section-header">
-          <span class="section-num">07 / Components</span>
-          <h2 class="section-title">UI Component Kit & Tokens</h2>
+          <div class="section-tag">
+            <span class="badge badge-outline">06 / Components</span>
+          </div>
+          <h2 class="section-title">shadcn/ui Component Kit</h2>
           <p class="section-desc">
-            Standardized UI components built with brand tokens for web and desktop products.
+            Standardized UI components styled with authentic shadcn/ui design tokens.
           </p>
         </div>
 
-        <div class="card" style="margin-bottom: 1.5rem;">
-          <h3 style="font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 1rem;">Buttons & Interactive Controls</h3>
-          <div class="components-row">
-            <button class="btn-brand-primary">Launch Solar Terminal</button>
-            <button class="btn-brand-secondary">Explore Documentation</button>
-            <span class="badge-solar">Active Node</span>
-            <span class="badge-cyan">Telemetry AAA</span>
-            <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; border: 1px solid rgba(16, 185, 129, 0.4); padding: 0.3rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;">
-              Grid Synchronized
-            </span>
+        <div class="card" style="padding: 1.5rem; margin-bottom: 1.25rem;">
+          <h3 class="card-title" style="margin-bottom: 1rem;">Buttons & Badges</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+            <button class="btn btn-primary">Primary Action</button>
+            <button class="btn btn-secondary">Secondary Action</button>
+            <button class="btn btn-outline">Outline</button>
+            <button class="btn btn-ghost">Ghost</button>
+            <span class="badge badge-default">Default Badge</span>
+            <span class="badge badge-secondary">Secondary</span>
+            <span class="badge badge-outline">Outline</span>
+            <span class="badge badge-solar">Brand Solar</span>
           </div>
         </div>
       </section>
 
       <!-- ==================================================================
-           08. ASSET DOWNLOAD CENTER & EXPORT
+           07. ASSET DOWNLOAD CENTER & EXPORT
            ================================================================== -->
       <section id="downloads" class="brand-section">
         <div class="section-header">
-          <span class="section-num">08 / Export</span>
+          <div class="section-tag">
+            <span class="badge badge-outline">07 / Export</span>
+          </div>
           <h2 class="section-title">Asset Download Center & Tokens</h2>
           <p class="section-desc">
             Download vector SVG files, token configurations, and print-ready documentation instantly.
           </p>
         </div>
 
-        <div class="download-box">
-          <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.4rem;">Vector Brand Logos & Assets</h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary);">Direct 1-click vector SVG downloads for digital and print reproduction.</p>
+        <div class="card" style="padding: 1.75rem;">
+          <h3 class="card-title" style="margin-bottom: 0.25rem;">Vector Brand Logos & Assets</h3>
+          <p class="card-description" style="margin-bottom: 1.25rem;">Direct 1-click vector SVG downloads.</p>
 
-          <div class="asset-download-grid">
-            <div class="asset-dl-card">
+          <div class="logo-variants-grid">
+            <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">Master Color Lockup</div>
-                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem;">Full RGB color logo for dark interfaces</div>
+                <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Master Color Lockup</div>
+                <div class="card-description" style="margin-bottom: 1rem;">Full RGB color logo</div>
               </div>
-              <button class="btn-sidebar btn-sidebar-primary" data-download-svg="master_color">Download SVG</button>
+              <button class="btn btn-primary btn-sm" data-download-svg="master_color">Download SVG</button>
             </div>
 
-            <div class="asset-dl-card">
+            <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">Dark Monochrome</div>
-                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem;">Solid white vector for dark prints & foils</div>
+                <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Dark Monochrome</div>
+                <div class="card-description" style="margin-bottom: 1rem;">Solid white vector</div>
               </div>
-              <button class="btn-sidebar" data-download-svg="dark_mono">Download SVG</button>
+              <button class="btn btn-outline btn-sm" data-download-svg="dark_mono">Download SVG</button>
             </div>
 
-            <div class="asset-dl-card">
+            <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">Light Monochrome</div>
-                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem;">Solid obsidian for light paper & apparel</div>
+                <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Light Monochrome</div>
+                <div class="card-description" style="margin-bottom: 1rem;">Solid obsidian vector</div>
               </div>
-              <button class="btn-sidebar" data-download-svg="light_mono">Download SVG</button>
+              <button class="btn btn-outline btn-sm" data-download-svg="light_mono">Download SVG</button>
             </div>
 
-            <div class="asset-dl-card">
+            <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">Helical Monogram Mark</div>
-                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem;">Isolated 1:1 symbol for app icons & avatars</div>
+                <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Monogram Symbol</div>
+                <div class="card-description" style="margin-bottom: 1rem;">1:1 symbol icon</div>
               </div>
-              <button class="btn-sidebar" data-download-svg="monogram">Download SVG</button>
+              <button class="btn btn-outline btn-sm" data-download-svg="monogram">Download SVG</button>
             </div>
           </div>
 
-          <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 0.4rem;">Developer Design Tokens</h3>
-          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Export machine-readable design tokens for your engineering stack.</p>
+          <h3 class="card-title" style="margin-top: 2rem; margin-bottom: 0.25rem;">Developer Design Tokens</h3>
+          <p class="card-description" style="margin-bottom: 1rem;">Export machine-readable design tokens for your tech stack.</p>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-            <button id="exportJsonTokensBtn" class="btn-sidebar" style="width: auto; padding: 0.75rem 1.25rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <button id="exportJsonTokensBtn" class="btn btn-outline btn-sm">
               <span>Export tokens.json</span>
             </button>
-
-            <button id="exportCssTokensBtn" class="btn-sidebar" style="width: auto; padding: 0.75rem 1.25rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <button id="exportCssTokensBtn" class="btn btn-outline btn-sm">
               <span>Export tokens.css</span>
             </button>
-
-            <button id="exportTailwindTokensBtn" class="btn-sidebar" style="width: auto; padding: 0.75rem 1.25rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            <button id="exportTailwindTokensBtn" class="btn btn-outline btn-sm">
               <span>Export tailwind.config.js</span>
             </button>
           </div>
@@ -1036,11 +810,9 @@
       </section>
 
       <!-- Footer -->
-      <footer style="margin-top: 6rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-muted);">
-        <div>&copy; 2026 SOLIS Dynamics Inc. All rights reserved. Brand Guidelines v1.0.</div>
-        <div style="display: flex; gap: 1.5rem;">
-          <a href="#hero" style="color: var(--text-secondary); text-decoration: none;">Back to Top</a>
-        </div>
+      <footer style="margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid hsl(var(--border)); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: hsl(var(--muted-foreground));">
+        <div>&copy; 2026 SOLIS Dynamics Inc. Built with shadcn/ui.</div>
+        <div><a href="#hero" style="color: inherit; text-decoration: none;">Back to Top ↑</a></div>
       </footer>
 
     </main>
