@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
+  <!-- Material Design Icons (Google Material Symbols / react-icons/md) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
   
@@ -21,7 +24,7 @@
   <div class="app-container">
     
     <!-- ====================================================================
-         SIDEBAR NAVIGATION (QUANTIRA DEEP BLUE)
+         SIDEBAR NAVIGATION (QUANTIRA DEEP BLUE WITH MATERIAL DESIGN ICONS)
          ==================================================================== -->
     <aside class="sidebar">
       <div class="sidebar-header">
@@ -35,20 +38,29 @@
         </a>
       </div>
 
-      <!-- Navigation Links (Matching the 21-page Document Index) -->
+      <!-- Navigation Links (Matching the 21-page Document Index with Material Design Icons) -->
       <nav class="sidebar-nav">
         <div class="nav-group">
           <div class="nav-group-title">Index & Overview</div>
           <a href="#cover" class="nav-link active">
-            <span>Cover Page</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">menu_book</span>
+              <span>Cover Page</span>
+            </span>
             <span class="page-num-pill">01</span>
           </a>
           <a href="#contents" class="nav-link">
-            <span>Contents</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">format_list_bulleted</span>
+              <span>Contents</span>
+            </span>
             <span class="page-num-pill">INDEX</span>
           </a>
           <a href="#intro" class="nav-link">
-            <span>Introduction</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">info</span>
+              <span>Introduction</span>
+            </span>
             <span class="page-num-pill">02</span>
           </a>
         </div>
@@ -56,39 +68,66 @@
         <div class="nav-group">
           <div class="nav-group-title">Logo Design</div>
           <a href="#mark-origins" class="nav-link">
-            <span>Mark Origins</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">auto_awesome</span>
+              <span>Mark Origins</span>
+            </span>
             <span class="page-num-pill">03</span>
           </a>
           <a href="#logo-mark" class="nav-link">
-            <span>Logo Mark</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">token</span>
+              <span>Logo Mark</span>
+            </span>
             <span class="page-num-pill">04</span>
           </a>
           <a href="#mark-construction" class="nav-link">
-            <span>Mark Construction</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">architecture</span>
+              <span>Mark Construction</span>
+            </span>
             <span class="page-num-pill">05</span>
           </a>
           <a href="#horizontal-logo" class="nav-link">
-            <span>Horizontal Logo</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">view_stream</span>
+              <span>Horizontal Logo</span>
+            </span>
             <span class="page-num-pill">06</span>
           </a>
           <a href="#logo-construction" class="nav-link">
-            <span>Logo Construction</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">square_foot</span>
+              <span>Logo Construction</span>
+            </span>
             <span class="page-num-pill">07</span>
           </a>
           <a href="#mono-color" class="nav-link">
-            <span>Mono Color Logo</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">contrast</span>
+              <span>Mono Color Logo</span>
+            </span>
             <span class="page-num-pill">08</span>
           </a>
           <a href="#safe-size" class="nav-link">
-            <span>Safe Size</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">aspect_ratio</span>
+              <span>Safe Size</span>
+            </span>
             <span class="page-num-pill">09</span>
           </a>
           <a href="#correct-size" class="nav-link">
-            <span>Correct Size</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">check_circle</span>
+              <span>Correct Size</span>
+            </span>
             <span class="page-num-pill">10</span>
           </a>
           <a href="#incorrect-size" class="nav-link">
-            <span>Incorrect Size</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">cancel</span>
+              <span>Incorrect Size</span>
+            </span>
             <span class="page-num-pill">11</span>
           </a>
         </div>
@@ -96,11 +135,17 @@
         <div class="nav-group">
           <div class="nav-group-title">Brand Color</div>
           <a href="#colors" class="nav-link">
-            <span>Colors</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">palette</span>
+              <span>Colors</span>
+            </span>
             <span class="page-num-pill">12</span>
           </a>
           <a href="#color-usage" class="nav-link">
-            <span>Color Usage (50/30/20)</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">pie_chart</span>
+              <span>Color Usage (50/30/20)</span>
+            </span>
             <span class="page-num-pill">13</span>
           </a>
         </div>
@@ -108,11 +153,17 @@
         <div class="nav-group">
           <div class="nav-group-title">Typography</div>
           <a href="#typography" class="nav-link">
-            <span>Typography (Lexend)</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">text_fields</span>
+              <span>Typography (Lexend)</span>
+            </span>
             <span class="page-num-pill">14</span>
           </a>
           <a href="#type-hierarchy" class="nav-link">
-            <span>Hierarchy Specimen</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">format_size</span>
+              <span>Hierarchy Specimen</span>
+            </span>
             <span class="page-num-pill">15</span>
           </a>
         </div>
@@ -120,11 +171,17 @@
         <div class="nav-group">
           <div class="nav-group-title">Imagery & Pattern</div>
           <a href="#photography" class="nav-link">
-            <span>Photography</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">photo_camera</span>
+              <span>Photography</span>
+            </span>
             <span class="page-num-pill">16</span>
           </a>
           <a href="#pattern" class="nav-link">
-            <span>Pattern Usage</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">grid_on</span>
+              <span>Pattern Usage</span>
+            </span>
             <span class="page-num-pill">17</span>
           </a>
         </div>
@@ -132,28 +189,37 @@
         <div class="nav-group">
           <div class="nav-group-title">Brand Stuff</div>
           <a href="#mockups" class="nav-link">
-            <span>Brand Design Mockups</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">storefront</span>
+              <span>Brand Design Mockups</span>
+            </span>
             <span class="page-num-pill">18</span>
           </a>
           <a href="#digital-mockups" class="nav-link">
-            <span>Digital Mockups</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">phone_iphone</span>
+              <span>Digital Mockups</span>
+            </span>
             <span class="page-num-pill">19</span>
           </a>
           <a href="#downloads" class="nav-link">
-            <span>Asset Download Center</span>
+            <span class="nav-link-content">
+              <span class="material-symbols-outlined nav-icon">cloud_download</span>
+              <span>Asset Download Center</span>
+            </span>
             <span class="page-num-pill">PNG</span>
           </a>
         </div>
       </nav>
 
-      <!-- Sidebar Actions -->
+      <!-- Sidebar Actions (Material Design Icons) -->
       <div class="sidebar-footer">
         <button id="printPdfBtn" class="btn btn-outline btn-sm" style="width: 100%;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;">print</span>
           <span>Print / Export PDF</span>
         </button>
         <a href="assets/logo.png" download="quantira-logo.png" class="btn btn-primary btn-sm" style="width: 100%; text-decoration: none;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span class="material-symbols-outlined" style="font-size: 1.1rem;">file_download</span>
           <span>Download Logo (.PNG)</span>
         </a>
       </div>
@@ -172,7 +238,7 @@
         <div style="display: flex; gap: 0.5rem; align-items: center;">
           <span class="badge badge-blue">Version 1.0</span>
           <button id="themeToggleBtn" class="btn btn-outline btn-sm">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <span class="material-symbols-outlined" style="font-size: 1.1rem;">dark_mode</span>
             <span>Dark Mode</span>
           </button>
         </div>
@@ -206,31 +272,52 @@
 
           <div class="toc-list">
             <a href="#intro" class="toc-item">
-              <span>Introduction</span>
+              <span style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="material-symbols-outlined" style="font-size: 1rem; color: #2a5ba9;">info</span>
+                <span>Introduction</span>
+              </span>
               <span class="toc-page">02</span>
             </a>
             <a href="#mark-origins" class="toc-item">
-              <span>Logo Design</span>
+              <span style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="material-symbols-outlined" style="font-size: 1rem; color: #2a5ba9;">auto_awesome</span>
+                <span>Logo Design</span>
+              </span>
               <span class="toc-page">03</span>
             </a>
             <a href="#colors" class="toc-item">
-              <span>Brand Color</span>
+              <span style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="material-symbols-outlined" style="font-size: 1rem; color: #2a5ba9;">palette</span>
+                <span>Brand Color</span>
+              </span>
               <span class="toc-page">12</span>
             </a>
             <a href="#typography" class="toc-item">
-              <span>Typography</span>
+              <span style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="material-symbols-outlined" style="font-size: 1rem; color: #2a5ba9;">text_fields</span>
+                <span>Typography</span>
+              </span>
               <span class="toc-page">14</span>
             </a>
             <a href="#photography" class="toc-item">
-              <span>Imagery</span>
+              <span style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="material-symbols-outlined" style="font-size: 1rem; color: #2a5ba9;">photo_camera</span>
+                <span>Imagery</span>
+              </span>
               <span class="toc-page">16</span>
             </a>
             <a href="#pattern" class="toc-item">
-              <span>Pattern</span>
+              <span style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="material-symbols-outlined" style="font-size: 1rem; color: #2a5ba9;">grid_on</span>
+                <span>Pattern</span>
+              </span>
               <span class="toc-page">17</span>
             </a>
             <a href="#mockups" class="toc-item">
-              <span>Brand Stuff</span>
+              <span style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="material-symbols-outlined" style="font-size: 1rem; color: #2a5ba9;">storefront</span>
+                <span>Brand Stuff</span>
+              </span>
               <span class="toc-page">18</span>
             </a>
           </div>
@@ -352,7 +439,10 @@
               <img src="assets/logo-mark.png" alt="Basic Variant (.png)" style="width: 85px; height: 85px; object-fit: contain;">
             </div>
             <div style="font-family: var(--font-title); font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Basic Variant</div>
-            <a href="assets/logo-mark.png" download="quantira-mark.png" class="btn btn-outline btn-sm">Download .PNG</a>
+            <a href="assets/logo-mark.png" download="quantira-mark.png" class="btn btn-outline btn-sm">
+              <span class="material-symbols-outlined" style="font-size: 1rem;">download</span>
+              <span>Download .PNG</span>
+            </a>
           </div>
 
           <!-- Dark Background Variant (.PNG) -->
@@ -361,7 +451,10 @@
               <img src="assets/logo-mark-dark.png" alt="Dark Background Variant (.png)" style="width: 85px; height: 85px; object-fit: contain;">
             </div>
             <div style="font-family: var(--font-title); font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Dark Backgroud Variant</div>
-            <a href="assets/logo-mark-dark.png" download="quantira-mark-dark.png" class="btn btn-outline btn-sm">Download .PNG</a>
+            <a href="assets/logo-mark-dark.png" download="quantira-mark-dark.png" class="btn btn-outline btn-sm">
+              <span class="material-symbols-outlined" style="font-size: 1rem;">download</span>
+              <span>Download .PNG</span>
+            </a>
           </div>
 
           <!-- White Mono Variant (.PNG) -->
@@ -370,7 +463,10 @@
               <img src="assets/logo-mark-white.png" alt="White Mono Variant (.png)" style="width: 85px; height: 85px; object-fit: contain;">
             </div>
             <div style="font-family: var(--font-title); font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">White Mono Variant</div>
-            <a href="assets/logo-mark-white.png" download="quantira-mark-white.png" class="btn btn-outline btn-sm">Download .PNG</a>
+            <a href="assets/logo-mark-white.png" download="quantira-mark-white.png" class="btn btn-outline btn-sm">
+              <span class="material-symbols-outlined" style="font-size: 1rem;">download</span>
+              <span>Download .PNG</span>
+            </a>
           </div>
         </div>
       </section>
@@ -776,17 +872,19 @@
             <div class="type-role-label">Button & Link</div>
             <div style="display: flex; align-items: center; gap: 2rem;">
               <button class="btn btn-primary" style="font-family: 'Noto Sans', sans-serif; font-weight: 700; letter-spacing: 1px;">
-                GET STARTED
+                <span class="material-symbols-outlined" style="font-size: 1rem;">touch_app</span>
+                <span>GET STARTED</span>
               </button>
-              <a href="#cover" style="color: #2a5ba9; font-weight: 600; text-decoration: none; font-family: 'Noto Sans', sans-serif;">
-                Learn More →
+              <a href="#cover" style="color: #2a5ba9; font-weight: 600; text-decoration: none; font-family: 'Noto Sans', sans-serif; display: flex; align-items: center; gap: 0.25rem;">
+                <span>Learn More</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
               </a>
             </div>
           </div>
 
         </div>
 
-        <!-- Interactive Sandbox -->
+        <!-- Interactive Sandbox with Clean Controls -->
         <div class="playground-box">
           <h3 class="doc-title" style="font-size: 1.3rem; margin-bottom: 0.25rem;">Live Typography Playground</h3>
           <p class="doc-desc-text" style="font-size: 0.85rem; margin-bottom: 1.25rem;">
@@ -806,7 +904,7 @@
             <div class="control-group">
               <label class="control-label">
                 <span>Font Size</span>
-                <span id="typeSizeVal" style="color: #2a5ba9;">48px</span>
+                <span id="typeSizeVal">48px</span>
               </label>
               <input type="range" id="typeSize" class="control-input" min="16" max="96" value="48">
             </div>
@@ -825,7 +923,7 @@
             <div class="control-group">
               <label class="control-label">
                 <span>Letter Spacing</span>
-                <span id="typeSpacingVal" style="color: #2a5ba9;">-0.5px</span>
+                <span id="typeSpacingVal">-0.5px</span>
               </label>
               <input type="range" id="typeSpacing" class="control-input" min="-2" max="10" step="0.5" value="-0.5">
             </div>
@@ -833,7 +931,7 @@
             <div class="control-group">
               <label class="control-label">
                 <span>Line Height</span>
-                <span id="typeHeightVal" style="color: #2a5ba9;">1.2</span>
+                <span id="typeHeightVal">1.2</span>
               </label>
               <input type="range" id="typeHeight" class="control-input" min="0.9" max="2.0" step="0.05" value="1.2">
             </div>
@@ -847,7 +945,10 @@
 
           <div class="generated-css-code">
             <code id="generatedCss">font-family: 'Lexend', sans-serif; font-size: 48px; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px;</code>
-            <button class="btn btn-outline btn-sm" data-copy-target="#generatedCss">Copy CSS</button>
+            <button class="btn btn-outline btn-sm" data-copy-target="#generatedCss">
+              <span class="material-symbols-outlined" style="font-size: 1rem;">content_copy</span>
+              <span>Copy CSS</span>
+            </button>
           </div>
         </div>
       </section>
@@ -1000,8 +1101,9 @@
             <div style="font-family: var(--font-title); font-size: 1.35rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem;">
               LLM-OPTIMIZED CONTENT THAT RANKS ON GOOGLE & AI SEARCH
             </div>
-            <button class="btn btn-outline btn-sm" style="color: #6cbae7; border-color: #6cbae7;">
-              CONTACT US ↗
+            <button class="btn btn-outline btn-sm" style="color: #6cbae7; border-color: #6cbae7; display: inline-flex; align-items: center; gap: 0.35rem; margin: 0 auto;">
+              <span>CONTACT US</span>
+              <span class="material-symbols-outlined" style="font-size: 1rem;">open_in_new</span>
             </button>
           </div>
         </div>
@@ -1044,7 +1146,10 @@
                 <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Official Master Logo (.PNG)</div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem;">Full color gradient on transparent bg</div>
               </div>
-              <a href="assets/logo-transparent.png" download="quantira-master-logo.png" class="btn btn-primary btn-sm">Download .PNG</a>
+              <a href="assets/logo-transparent.png" download="quantira-master-logo.png" class="btn btn-primary btn-sm">
+                <span class="material-symbols-outlined" style="font-size: 1rem;">download</span>
+                <span>Download .PNG</span>
+              </a>
             </div>
 
             <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
@@ -1052,7 +1157,10 @@
                 <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Dark Mode Logo (.PNG)</div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem;">White wordmark for dark backgrounds</div>
               </div>
-              <a href="assets/logo-dark.png" download="quantira-logo-dark.png" class="btn btn-outline btn-sm">Download .PNG</a>
+              <a href="assets/logo-dark.png" download="quantira-logo-dark.png" class="btn btn-outline btn-sm">
+                <span class="material-symbols-outlined" style="font-size: 1rem;">download</span>
+                <span>Download .PNG</span>
+              </a>
             </div>
 
             <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
@@ -1060,7 +1168,10 @@
                 <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Isolated Q Mark (.PNG)</div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem;">Gradient Q mark icon only</div>
               </div>
-              <a href="assets/logo-mark.png" download="quantira-q-mark.png" class="btn btn-outline btn-sm">Download .PNG</a>
+              <a href="assets/logo-mark.png" download="quantira-q-mark.png" class="btn btn-outline btn-sm">
+                <span class="material-symbols-outlined" style="font-size: 1rem;">download</span>
+                <span>Download .PNG</span>
+              </a>
             </div>
 
             <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
@@ -1068,15 +1179,27 @@
                 <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem;">Solid White Logo (.PNG)</div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem;">Mono high-contrast single color</div>
               </div>
-              <a href="assets/logo-white.png" download="quantira-logo-white.png" class="btn btn-outline btn-sm">Download .PNG</a>
+              <a href="assets/logo-white.png" download="quantira-logo-white.png" class="btn btn-outline btn-sm">
+                <span class="material-symbols-outlined" style="font-size: 1rem;">download</span>
+                <span>Download .PNG</span>
+              </a>
             </div>
           </div>
 
           <h3 class="doc-title" style="font-size: 1.25rem; margin-bottom: 0.25rem;">Developer Design Tokens</h3>
           <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
-            <button id="exportJsonTokensBtn" class="btn btn-outline btn-sm">Export tokens.json</button>
-            <button id="exportCssTokensBtn" class="btn btn-outline btn-sm">Export tokens.css</button>
-            <button id="exportTailwindTokensBtn" class="btn btn-outline btn-sm">Export tailwind.config.js</button>
+            <button id="exportJsonTokensBtn" class="btn btn-outline btn-sm">
+              <span class="material-symbols-outlined" style="font-size: 1rem;">data_object</span>
+              <span>Export tokens.json</span>
+            </button>
+            <button id="exportCssTokensBtn" class="btn btn-outline btn-sm">
+              <span class="material-symbols-outlined" style="font-size: 1rem;">css</span>
+              <span>Export tokens.css</span>
+            </button>
+            <button id="exportTailwindTokensBtn" class="btn btn-outline btn-sm">
+              <span class="material-symbols-outlined" style="font-size: 1rem;">code</span>
+              <span>Export tailwind.config.js</span>
+            </button>
           </div>
         </div>
       </section>
