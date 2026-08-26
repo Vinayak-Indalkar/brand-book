@@ -1,52 +1,74 @@
-# Simple, solid local HTTP server
+# Pure Socket-based High Performance Static Server (Host-Agnostic, Tunnel-Compatible)
 $port = 3000
 $root = $PSScriptRoot
 
-$listener = New-Object System.Net.HttpListener
-$listener.Prefixes.Add("http://localhost:$port/")
-$listener.Prefixes.Add("http://127.0.0.1:$port/")
+$listener = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Any, $port)
 $listener.Start()
 
-Write-Host "Brand Book Server is live at: http://localhost:$port/"
+Write-Host "Brand Book Server is live on port $port (Any Host / Localhost / Tunnel)"
 
-while ($listener.IsListening) {
+while ($true) {
     try {
-        $context = $listener.GetContext()
-        $request = $context.Request
-        $response = $context.Response
+        $client = $listener.AcceptTcpClient()
+        $stream = $client.GetStream()
+        $reader = New-Object System.IO.StreamReader($stream, [System.Text.Encoding]::UTF8)
 
-        $path = $request.Url.LocalPath
-        if ($path -eq "/" -or [string]::IsNullOrEmpty($path)) {
-            $path = "/index.html"
+        $requestLine = $reader.ReadLine()
+        if ([string]::IsNullOrWhiteSpace($requestLine)) {
+            $client.Close()
+            continue
         }
 
-        $localFile = [System.IO.Path]::Combine($root, $path.TrimStart('/').Replace('/', [System.IO.Path]::DirectorySeparatorChar))
+        # Read remaining headers
+        while ($true) {
+            $line = $reader.ReadLine()
+            if ([string]::IsNullOrWhiteSpace($line)) { break }
+        }
+
+        $parts = $requestLine.Split(' ')
+        $method = $parts[0]
+        $rawUrl = if ($parts.Length -gt 1) { $parts[1] } else { "/" }
+
+        $urlPath = $rawUrl.Split('?')[0]
+        if ($urlPath -eq "/" -or [string]::IsNullOrEmpty($urlPath)) {
+            $urlPath = "/index.html"
+        }
+
+        $decodedPath = [System.Uri]::UnescapeDataString($urlPath)
+        $localFile = [System.IO.Path]::Combine($root, $decodedPath.TrimStart('/').Replace('/', [System.IO.Path]::DirectorySeparatorChar))
 
         if ([System.IO.File]::Exists($localFile)) {
             $ext = [System.IO.Path]::GetExtension($localFile).ToLower()
-            switch ($ext) {
-                ".html" { $response.ContentType = "text/html; charset=utf-8" }
-                ".css"  { $response.ContentType = "text/css; charset=utf-8" }
-                ".js"   { $response.ContentType = "application/javascript; charset=utf-8" }
-                ".json" { $response.ContentType = "application/json; charset=utf-8" }
-                ".svg"  { $response.ContentType = "image/svg+xml" }
-                ".png"  { $response.ContentType = "image/png" }
-                ".jpg"  { $response.ContentType = "image/jpeg" }
-                default { $response.ContentType = "application/octet-stream" }
+            $mime = switch ($ext) {
+                ".html" { "text/html; charset=utf-8" }
+                ".css"  { "text/css; charset=utf-8" }
+                ".js"   { "application/javascript; charset=utf-8" }
+                ".json" { "application/json; charset=utf-8" }
+                ".svg"  { "image/svg+xml" }
+                ".png"  { "image/png" }
+                ".jpg"  { "image/jpeg" }
+                ".ico"  { "image/x-icon" }
+                default { "application/octet-stream" }
             }
 
             $bytes = [System.IO.File]::ReadAllBytes($localFile)
-            $response.ContentLength64 = $bytes.Length
-            $response.OutputStream.Write($bytes, 0, $bytes.Length)
+            $headerText = "HTTP/1.1 200 OK`r`nContent-Type: $mime`r`nContent-Length: $($bytes.Length)`r`nAccess-Control-Allow-Origin: *`r`nConnection: close`r`n`r`n"
+            $headerBytes = [System.Text.Encoding]::ASCII.GetBytes($headerText)
+
+            $stream.Write($headerBytes, 0, $headerBytes.Length)
+            $stream.Write($bytes, 0, $bytes.Length)
         } else {
-            $response.StatusCode = 404
-            $msg = [System.Text.Encoding]::UTF8.GetBytes("404 - Not Found")
-            $response.ContentType = "text/plain; charset=utf-8"
-            $response.ContentLength64 = $msg.Length
-            $response.OutputStream.Write($msg, 0, $msg.Length)
+            $notFound = [System.Text.Encoding]::UTF8.GetBytes("404 - Not Found")
+            $headerText = "HTTP/1.1 404 Not Found`r`nContent-Type: text/plain; charset=utf-8`r`nContent-Length: $($notFound.Length)`r`nConnection: close`r`n`r`n"
+            $headerBytes = [System.Text.Encoding]::ASCII.GetBytes($headerText)
+
+            $stream.Write($headerBytes, 0, $headerBytes.Length)
+            $stream.Write($notFound, 0, $notFound.Length)
         }
-        $response.Close()
+
+        $stream.Flush()
+        $client.Close()
     } catch {
-        # Catch and continue listening
+        # Continue listening on next connection
     }
 }
