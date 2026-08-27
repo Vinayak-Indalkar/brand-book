@@ -439,9 +439,9 @@ function initAuth() {
   const passwordInput = document.getElementById('loginPassword');
   const togglePasswordBtn = document.getElementById('togglePasswordBtn');
   const passwordEyeIcon = document.getElementById('passwordEyeIcon');
-  const quickDemoBtn = document.getElementById('quickDemoBtn');
   const topLogoutBtn = document.getElementById('topLogoutBtn');
   const sideLogoutBtn = document.getElementById('sideLogoutBtn');
+  const topUserName = document.getElementById('topUserName');
   const topUserEmail = document.getElementById('topUserEmail');
   const errorAlert = document.getElementById('loginErrorAlert');
   const errorMessage = document.getElementById('loginErrorMessage');
@@ -453,6 +453,11 @@ function initAuth() {
       if (loginOverlay) loginOverlay.classList.add('hidden');
       if (appContainer) appContainer.style.display = 'flex';
       if (topUserEmail) topUserEmail.textContent = savedUser;
+      if (topUserName) {
+        const rawName = savedUser.split('@')[0].replace(/[._-]/g, ' ');
+        const formattedName = rawName.charAt(0).toUpperCase() + rawName.slice(1);
+        topUserName.textContent = formattedName.toLowerCase() === 'admin' ? 'Admin User' : formattedName;
+      }
     } else {
       if (loginOverlay) loginOverlay.classList.remove('hidden');
       if (appContainer) appContainer.style.display = 'none';
