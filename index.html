@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <!-- Main Stylesheet (Standards / Responsive.io Theme) -->
-  <link rel="stylesheet" href="styles.css?v=1.0.8">
+  <link rel="stylesheet" href="styles.css?v=1.0.9">
   
   <!-- PNG Favicon -->
   <link rel="icon" type="image/png" href="assets/logo-mark.png">
@@ -343,14 +343,14 @@
         <!-- Background Watermark (.PNG) -->
         <img src="assets/logo-mark.png" class="cover-watermark" alt="Watermark (.png)" style="opacity: 0.08;">
 
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem;">
           <!-- Official Quantira Master Logo in .PNG format -->
-          <img src="assets/logo-transparent.png" alt="Quantira Technologies Logo (.png)" style="max-height: 54px; width: auto; object-fit: contain;">
-          <span style="font-family: 'Lexend', sans-serif; font-size: 0.95rem; color: #64748b;">Version 1.0</span>
+          <img src="assets/logo-transparent.png" alt="Quantira Technologies Logo (.png)" style="max-height: 52px; width: auto; object-fit: contain;">
+          <span class="badge badge-blue">Standards &bull; Version 1.0</span>
         </div>
 
-        <h1 class="cover-title">Brand Guidelines</h1>
-        <p class="cover-subtitle">A complete guidleines of Quantiratechnologies</p>
+        <h1 class="cover-title">Quantira Brand Identity Guidelines</h1>
+        <p class="cover-subtitle">Defines the standards and design system that guide how Quantira looks, communicates, and operates with shared clarity across every touchpoint.</p>
       </section>
 
       <!-- ==================================================================
@@ -794,61 +794,160 @@
            ================================================================== -->
       <section id="colors" class="brand-section">
         <div class="doc-section-header">
-          <span class="doc-category-label">BRAND COLOR</span>
+          <span class="doc-category-label">03 / COLOR MATRIX</span>
           <span class="doc-page-badge">12</span>
         </div>
-        <h2 class="doc-title">Colors</h2>
+        <h2 class="doc-title">Color Palette</h2>
         <div class="doc-title-underline"></div>
 
         <p class="doc-desc-text">
-          Our minimal, high-contrast palette prioritizes legibility. Use Pure White and Core Black for structure, reserving the dynamic Blue Gradient for key actions and brand moments.
+          Our color palette is built around Quantira Deep Blue and Light Blue from our core identity, supported by a clean set of modern neutrals and dynamic brand gradients. Together, these elements create a clear, contemporary visual system that feels functional, high-contrast, and unmistakably Quantira.
         </p>
 
-        <!-- Color Swatches Columns (Matching PDF Page 13) -->
+        <!-- Primary Brand Colors Header -->
+        <div style="font-family: var(--font-title); font-size: 1.1rem; font-weight: 700; color: var(--color-text-active); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span class="badge badge-blue">Primary Palette</span>
+          <span>Core Brand Colors</span>
+        </div>
+
+        <!-- Color Swatches Columns (Primary) -->
         <div class="color-swatch-columns">
           
-          <!-- Blue Gradient -->
-          <div class="swatch-pillar" data-copy="linear-gradient(135deg, #6cbae7 0%, #2a5ba9 100%)">
-            <div class="swatch-color-fill" style="background: var(--quantira-blue-grad);">
-              <span class="swatch-hex-tag">#6cbae7</span>
-              <span class="swatch-hex-tag">#2a5ba9</span>
+          <!-- Quantira Deep Blue -->
+          <div class="swatch-pillar" data-copy="#2a5ba9">
+            <div class="swatch-color-fill" style="background: #2a5ba9;">
+              <span class="swatch-hex-tag">#2A5BA9</span>
             </div>
             <div class="swatch-meta-info">
-              <div class="swatch-name-title">Blue Gradient</div>
+              <div class="swatch-name-title">Quantira Deep Blue</div>
               <div class="swatch-val-table">
-                <div><span>From:</span> <strong>#6cbae7</strong></div>
-                <div><span>To:</span> <strong>#2a5ba9</strong></div>
-                <div><span>Role:</span> Accent & CTA</div>
+                <div><span>HEX:</span> <strong>#2A5BA9</strong></div>
+                <div><span>RGB:</span> <strong>42 / 91 / 169</strong></div>
+                <div><span>CMYK:</span> <strong>75 / 46 / 0 / 34</strong></div>
+                <div><span>PMS:</span> <strong>PANTONE 7687 C</strong></div>
               </div>
             </div>
           </div>
 
+          <!-- Quantira Sky Blue -->
+          <div class="swatch-pillar" data-copy="#6cbae7">
+            <div class="swatch-color-fill" style="background: #6cbae7;">
+              <span class="swatch-hex-tag" style="color: #09090b;">#6CBAE7</span>
+            </div>
+            <div class="swatch-meta-info">
+              <div class="swatch-name-title">Quantira Sky Blue</div>
+              <div class="swatch-val-table">
+                <div><span>HEX:</span> <strong>#6CBAE7</strong></div>
+                <div><span>RGB:</span> <strong>108 / 186 / 231</strong></div>
+                <div><span>CMYK:</span> <strong>53 / 19 / 0 / 9</strong></div>
+                <div><span>PMS:</span> <strong>PANTONE 2915 C</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blue Gradient -->
+          <div class="swatch-pillar" data-copy="linear-gradient(135deg, #2a5ba9 0%, #6cbae7 100%)">
+            <div class="swatch-color-fill" style="background: var(--quantira-blue-grad);">
+              <span class="swatch-hex-tag">#2A5BA9 &rarr; #6CBAE7</span>
+            </div>
+            <div class="swatch-meta-info">
+              <div class="swatch-name-title">Core Brand Gradient</div>
+              <div class="swatch-val-table">
+                <div><span>From:</span> <strong>#2A5BA9 (Deep Blue)</strong></div>
+                <div><span>To:</span> <strong>#6CBAE7 (Sky Blue)</strong></div>
+                <div><span>Angle:</span> <strong>135&deg; Diagonal</strong></div>
+                <div><span>Role:</span> <strong>Key CTA & Hero Moments</strong></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modern Neutrals Header -->
+        <div style="font-family: var(--font-title); font-size: 1.1rem; font-weight: 700; color: var(--color-text-active); margin-top: 2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span class="badge badge-outline">Supporting Suite</span>
+          <span>Modern Neutrals</span>
+        </div>
+
+        <!-- Color Swatches Columns (Neutrals) -->
+        <div class="color-swatch-columns">
+
           <!-- Core Black -->
-          <div class="swatch-pillar" data-copy="#020202">
-            <div class="swatch-color-fill" style="background: #020202;">
-              <span class="swatch-hex-tag">#020202</span>
+          <div class="swatch-pillar" data-copy="#09090b">
+            <div class="swatch-color-fill" style="background: #09090b;">
+              <span class="swatch-hex-tag">#09090B</span>
             </div>
             <div class="swatch-meta-info">
               <div class="swatch-name-title">Core Black</div>
               <div class="swatch-val-table">
-                <div><span>RGB:</span> <strong>(2, 2, 2)</strong></div>
-                <div><span>CMYK:</span> <strong>(0%, 0%, 0%, 99%)</strong></div>
-                <div><span>Role:</span> Structure & Text</div>
+                <div><span>HEX:</span> <strong>#09090B</strong></div>
+                <div><span>RGB:</span> <strong>9 / 9 / 11</strong></div>
+                <div><span>CMYK:</span> <strong>0 / 0 / 0 / 96</strong></div>
+                <div><span>Role:</span> <strong>Structure & High Contrast</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Neutral Gray 700 -->
+          <div class="swatch-pillar" data-copy="#3f3f46">
+            <div class="swatch-color-fill" style="background: #3f3f46;">
+              <span class="swatch-hex-tag">#3F3F46</span>
+            </div>
+            <div class="swatch-meta-info">
+              <div class="swatch-name-title">Gray 700</div>
+              <div class="swatch-val-table">
+                <div><span>HEX:</span> <strong>#3F3F46</strong></div>
+                <div><span>RGB:</span> <strong>63 / 63 / 70</strong></div>
+                <div><span>CMYK:</span> <strong>0 / 0 / 0 / 73</strong></div>
+                <div><span>Role:</span> <strong>Dark Borders & Badges</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Neutral Gray 400 -->
+          <div class="swatch-pillar" data-copy="#a1a1aa">
+            <div class="swatch-color-fill" style="background: #a1a1aa;">
+              <span class="swatch-hex-tag" style="color: #09090b;">#A1A1AA</span>
+            </div>
+            <div class="swatch-meta-info">
+              <div class="swatch-name-title">Gray 400</div>
+              <div class="swatch-val-table">
+                <div><span>HEX:</span> <strong>#A1A1AA</strong></div>
+                <div><span>RGB:</span> <strong>161 / 161 / 170</strong></div>
+                <div><span>CMYK:</span> <strong>0 / 0 / 0 / 33</strong></div>
+                <div><span>Role:</span> <strong>Secondary Typography</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Neutral Gray 100 -->
+          <div class="swatch-pillar" data-copy="#f4f4f5">
+            <div class="swatch-color-fill" style="background: #f4f4f5; border-bottom: 1px solid var(--color-stroke-default);">
+              <span class="swatch-hex-tag" style="color: #09090b;">#F4F4F5</span>
+            </div>
+            <div class="swatch-meta-info">
+              <div class="swatch-name-title">Gray 100</div>
+              <div class="swatch-val-table">
+                <div><span>HEX:</span> <strong>#F4F4F5</strong></div>
+                <div><span>RGB:</span> <strong>244 / 244 / 245</strong></div>
+                <div><span>CMYK:</span> <strong>0 / 0 / 0 / 4</strong></div>
+                <div><span>Role:</span> <strong>Subtle Surface Background</strong></div>
               </div>
             </div>
           </div>
 
           <!-- Pure White -->
           <div class="swatch-pillar" data-copy="#ffffff">
-            <div class="swatch-color-fill" style="background: #ffffff; border-bottom: 1px solid #e2e8f0;">
-              <span class="swatch-hex-tag" style="color: #020202;">#ffffff</span>
+            <div class="swatch-color-fill" style="background: #ffffff; border-bottom: 1px solid var(--color-stroke-default);">
+              <span class="swatch-hex-tag" style="color: #09090b;">#FFFFFF</span>
             </div>
             <div class="swatch-meta-info">
               <div class="swatch-name-title">Pure White</div>
               <div class="swatch-val-table">
-                <div><span>RGB:</span> <strong>(255, 255, 255)</strong></div>
-                <div><span>CMYK:</span> <strong>(0%, 0%, 0%, 0%)</strong></div>
-                <div><span>Role:</span> Dominant Canvas</div>
+                <div><span>HEX:</span> <strong>#FFFFFF</strong></div>
+                <div><span>RGB:</span> <strong>255 / 255 / 255</strong></div>
+                <div><span>CMYK:</span> <strong>0 / 0 / 0 / 0</strong></div>
+                <div><span>Role:</span> <strong>Dominant Primary Canvas</strong></div>
               </div>
             </div>
           </div>
@@ -1309,6 +1408,6 @@
   <div class="toast-container"></div>
 
   <!-- JavaScript -->
-  <script src="app.js?v=1.0.8"></script>
+  <script src="app.js?v=1.0.9"></script>
 </body>
 </html>
