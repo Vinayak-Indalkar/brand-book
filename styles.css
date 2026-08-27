@@ -436,10 +436,11 @@ body.dark-theme .login-card {
 }
 
 .login-logo {
-  max-height: 48px;
+  max-height: 52px;
   width: auto;
+  max-width: 290px;
   object-fit: contain;
-  margin-bottom: 1.25rem;
+  display: block;
 }
 
 .login-title {
