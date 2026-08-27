@@ -389,6 +389,45 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-active);
 }
 
+.btn-logout {
+  color: #09090b !important;
+  border-color: var(--color-stroke-default) !important;
+  background-color: var(--color-bg-surface) !important;
+  font-weight: 600;
+}
+
+.btn-logout span:last-child {
+  color: #09090b;
+}
+
+body.dark-theme .btn-logout {
+  color: #fafafa !important;
+  border-color: var(--color-stroke-default) !important;
+  background-color: var(--color-bg-surface) !important;
+}
+
+body.dark-theme .btn-logout span:last-child {
+  color: #fafafa;
+}
+
+.btn-logout:hover {
+  background-color: #fef2f2 !important;
+  border-color: #fecaca !important;
+}
+
+.btn-logout:hover span:last-child {
+  color: #dc2626;
+}
+
+body.dark-theme .btn-logout:hover {
+  background-color: #450a0a !important;
+  border-color: #7f1d1d !important;
+}
+
+body.dark-theme .btn-logout:hover span:last-child {
+  color: #fca5a5;
+}
+
 .btn-sm {
   height: 2rem;
   padding: 0 0.75rem;
