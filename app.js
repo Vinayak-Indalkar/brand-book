@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initAuth();
   initCopyButtons();
   initTypographyPlayground();
   initLogoStageControls();
@@ -425,4 +426,126 @@ function initScrollSpy() {
       }
     });
   });
+}
+
+// --------------------------------------------------------------------------
+// Authentication & Login Gateway
+// --------------------------------------------------------------------------
+function initAuth() {
+  const loginOverlay = document.getElementById('loginOverlay');
+  const appContainer = document.querySelector('.app-container');
+  const loginForm = document.getElementById('loginForm');
+  const emailInput = document.getElementById('loginEmail');
+  const passwordInput = document.getElementById('loginPassword');
+  const togglePasswordBtn = document.getElementById('togglePasswordBtn');
+  const passwordEyeIcon = document.getElementById('passwordEyeIcon');
+  const quickDemoBtn = document.getElementById('quickDemoBtn');
+  const topLogoutBtn = document.getElementById('topLogoutBtn');
+  const sideLogoutBtn = document.getElementById('sideLogoutBtn');
+  const topUserEmail = document.getElementById('topUserEmail');
+  const errorAlert = document.getElementById('loginErrorAlert');
+  const errorMessage = document.getElementById('loginErrorMessage');
+  const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+
+  function checkAuthStatus() {
+    const savedUser = localStorage.getItem('quantira_auth') || sessionStorage.getItem('quantira_auth');
+    if (savedUser) {
+      if (loginOverlay) loginOverlay.classList.add('hidden');
+      if (appContainer) appContainer.style.display = 'flex';
+      if (topUserEmail) topUserEmail.textContent = savedUser;
+    } else {
+      if (loginOverlay) loginOverlay.classList.remove('hidden');
+      if (appContainer) appContainer.style.display = 'none';
+    }
+  }
+
+  // Password visibility toggle
+  if (togglePasswordBtn && passwordInput) {
+    togglePasswordBtn.addEventListener('click', () => {
+      const isPassword = passwordInput.type === 'password';
+      passwordInput.type = isPassword ? 'text' : 'password';
+      if (passwordEyeIcon) {
+        passwordEyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+      }
+    });
+  }
+
+  // Quick 1-Click Demo Fill & Submit
+  if (quickDemoBtn) {
+    quickDemoBtn.addEventListener('click', () => {
+      if (emailInput) emailInput.value = 'admin@quantiratech.com';
+      if (passwordInput) passwordInput.value = 'quantira2026';
+      if (loginForm) loginForm.requestSubmit();
+    });
+  }
+
+  // Forgot password handler
+  if (forgotPasswordLink) {
+    forgotPasswordLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      showToast('Demo account: admin@quantiratech.com / quantira2026');
+    });
+  }
+
+  // Form submit handler
+  if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = emailInput ? emailInput.value.trim() : '';
+      const password = passwordInput ? passwordInput.value.trim() : '';
+      const remember = document.getElementById('rememberMe')?.checked ?? true;
+      const submitBtn = document.getElementById('loginSubmitBtn');
+      const btnText = document.getElementById('loginBtnText');
+
+      if (!email || !password) {
+        showError('Please enter both email and password.');
+        return;
+      }
+
+      if (password.length < 4) {
+        showError('Password must be at least 4 characters.');
+        return;
+      }
+
+      // Hide previous error
+      if (errorAlert) errorAlert.style.display = 'none';
+
+      // Loading state
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnText) btnText.textContent = 'Verifying...';
+
+      setTimeout(() => {
+        if (remember) {
+          localStorage.setItem('quantira_auth', email);
+        } else {
+          sessionStorage.setItem('quantira_auth', email);
+        }
+
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnText) btnText.textContent = 'Sign In to Brand Portal';
+
+        checkAuthStatus();
+        showToast(`Welcome, ${email.split('@')[0]}!`);
+      }, 350);
+    });
+  }
+
+  function showError(msg) {
+    if (errorAlert && errorMessage) {
+      errorMessage.textContent = msg;
+      errorAlert.style.display = 'flex';
+    }
+  }
+
+  function logout() {
+    localStorage.removeItem('quantira_auth');
+    sessionStorage.removeItem('quantira_auth');
+    checkAuthStatus();
+    showToast('Signed out successfully.');
+  }
+
+  if (topLogoutBtn) topLogoutBtn.addEventListener('click', logout);
+  if (sideLogoutBtn) sideLogoutBtn.addEventListener('click', logout);
+
+  checkAuthStatus();
 }
